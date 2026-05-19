@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Item \"C:\\\\Users\\\\hoeft\\\\OneDrive\\\\Dokumente\\\\mutnt\\\\leistungen.html\"\\).Length)"
+    ]
+  }
+}
