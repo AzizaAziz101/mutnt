@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(\\(Get-Item \"C:\\\\Users\\\\hoeft\\\\OneDrive\\\\Dokumente\\\\mutnt\\\\leistungen.html\"\\).Length)"
+      "PowerShell(\\(Get-Item \"C:\\\\Users\\\\hoeft\\\\OneDrive\\\\Dokumente\\\\mutnt\\\\leistungen.html\"\\).Length)",
+      "Bash(ls -la \"c:\\\\Users\\\\hoeft\\\\OneDrive\\\\Dokumente\\\\mutnt\\\\\" | head -30)",
+      "Read(//c/Users/hoeft/OneDrive/Dokumente/**)",
+      "PowerShell(Head -20)"
     ]
   }
 }
