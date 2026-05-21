@@ -480,43 +480,59 @@
 
     .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 220px 165px;
-        gap: 6px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        margin-top: 44px;
     }
-    .gi { overflow: hidden; position: relative; cursor: pointer; background: var(--mist); }
-    .gi-1 { grid-column: 1/6;  grid-row: 1; }
-    .gi-2 { grid-column: 6/9;  grid-row: 1; }
-    .gi-3 { grid-column: 9/13; grid-row: 1; }
-    .gi-4 { grid-column: 1/4;  grid-row: 2; }
-    .gi-5 { grid-column: 4/7;  grid-row: 2; }
-    .gi-6 { grid-column: 7/13; grid-row: 2; }
-
-    .gi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
-    .gi:hover img { transform: scale(1.05); }
-    .gi-overlay {
-        position: absolute; inset: 0;
-        background: linear-gradient(to top, rgba(17,24,39,0.78) 0%, transparent 55%);
-        opacity: 0; transition: opacity 0.32s ease;
-        display: flex; flex-direction: column; justify-content: flex-end;
-        padding: 16px 18px;
+    .gi {
+        background: var(--white);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        transition: background 0.2s;
+        position: relative;
     }
-    .gi:hover .gi-overlay { opacity: 1; }
-    .gi-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
-    .gi-title { font-size: 14px; font-weight: 600; color: #fff; }
+    .gi::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 0; height: 2px;
+        background: var(--teal);
+        transition: width 0.3s;
+    }
+    .gi:hover::after { width: 100%; }
+    .gi-img-wrap {
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: linear-gradient(135deg, #c8d6d5 0%, #a0b8b7 100%);
+    }
+    .gi-img-wrap img {
+        width: 100%; height: 100%; object-fit: cover;
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+    }
+    .gi:hover .gi-img-wrap img { transform: scale(1.04); }
+    .gi-info {
+        padding: 16px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-top: 1px solid var(--line);
+    }
+    .gi-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); }
+    .gi-title { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; }
 
     .gallery-more { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .gallery-count { font-size: 15px; color: var(--ink-soft); }
 
     @media (max-width: 800px) {
         .gallery-inner { padding: 52px 24px; }
-        .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-        .gi { grid-column: auto !important; grid-row: auto !important; height: 170px; }
-        .gi-overlay { opacity: 1; }
+        .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 480px) {
         .gallery-grid { grid-template-columns: 1fr; }
-        .gi { height: 190px; }
     }
 
     /* ═══════════════════════════════════════
@@ -927,30 +943,60 @@
             </a>
         </div>
         <div class="gallery-grid reveal rv1" role="list" aria-label="Referenzbilder">
-            <div class="gi gi-1" data-src="Fenster.jpg" data-cap="Maßgefertigte Aluminiumfenster – Einfamilienhaus Eberswalde" role="listitem" tabindex="0" aria-label="Aluminiumfenster – Einfamilienhaus, zum Vergrößern klicken">
-                <img src="Fenster.jpg" alt="Maßgefertigte Aluminiumfenster eines Einfamilienhauses in Eberswalde, 3-fach verglast" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
-                <div class="gi-overlay" aria-hidden="true"><span class="gi-tag">Fensterbau · Aluminium</span><span class="gi-title">Aluminiumfenster – Einfamilienhaus</span></div>
-            </div>
-            <div class="gi gi-2" data-src="Treppengeländer.jpg" data-cap="Individuelles Treppengeländer aus Schmiedeeisen – Altbausanierung Eberswalde" role="listitem" tabindex="0" aria-label="Schmiedeeisernes Treppengeländer, zum Vergrößern klicken">
-                <img src="Treppengeländer.jpg" alt="Schmiedeeisernes Treppengeländer in einer Altbausanierung in Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
-                <div class="gi-overlay" aria-hidden="true"><span class="gi-tag">Geländer · Schmiedeeisen</span><span class="gi-title">Treppengeländer – Altbausanierung</span></div>
-            </div>
-            <div class="gi gi-3" data-src="Einfahrtstor.jpg" data-cap="Elektrisches Schiebetor mit Fernsteuerung – Eberswalde" role="listitem" tabindex="0" aria-label="Elektrisches Einfahrtstor, zum Vergrößern klicken">
-                <img src="Einfahrtstor.jpg" alt="Elektrisches Schiebetor mit Elektroantrieb für ein Privatgrundstück in Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
-                <div class="gi-overlay" aria-hidden="true"><span class="gi-tag">Toranlage · Elektroantrieb</span><span class="gi-title">Elektrisches Schiebetor</span></div>
-            </div>
-            <div class="gi gi-4" data-src="Edelstahlbalkon.jpg" data-cap="Freitragender Anbaubalkon aus Edelstahl – Eberswalde" role="listitem" tabindex="0" aria-label="Freitragender Edelstahlbalkon, zum Vergrößern klicken">
-                <img src="Edelstahlbalkon.jpg" alt="Freitragender Anbaubalkon aus Edelstahl im Obergeschoss, Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
-                <div class="gi-overlay" aria-hidden="true"><span class="gi-tag">Anbaubalkon · Edelstahl</span><span class="gi-title">Freitragender Balkon – OG</span></div>
-            </div>
-            <div class="gi gi-5" data-src="autocarport.jpg" data-cap="Doppelcarport aus Stahl, PV-Ready – Eberswalde" role="listitem" tabindex="0" aria-label="Doppelcarport PV-Ready, zum Vergrößern klicken">
-                <img src="autocarport.jpg" alt="Doppelcarport aus verzinktem Stahl, photovoltaik-ready, Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
-                <div class="gi-overlay" aria-hidden="true"><span class="gi-tag">Carport · Stahl</span><span class="gi-title">Doppelcarport – PV-Ready</span></div>
-            </div>
-            <div class="gi gi-6" data-src="Glasvordach.jpg" data-cap="Glasvordach aus VSG-Sicherheitsglas – Eingangsbereich Eberswalde" role="listitem" tabindex="0" aria-label="Glasvordach VSG, zum Vergrößern klicken">
-                <img src="Glasvordach.jpg" alt="Glasvordach aus VSG-Sicherheitsglas am Eingangsbereich eines Wohnhauses, Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
-                <div class="gi-overlay" aria-hidden="true"><span class="gi-tag">Vordach · VSG-Glas</span><span class="gi-title">Glasvordach – Eingangssituation</span></div>
-            </div>
+            <article class="gi" data-cap="Maßgefertigte Aluminiumfenster – Einfamilienhaus Eberswalde" role="listitem" tabindex="0" aria-label="Aluminiumfenster – Einfamilienhaus, zum Vergrößern klicken">
+                <div class="gi-img-wrap">
+                    <img src="Fenster.jpg" alt="Maßgefertigte Aluminiumfenster eines Einfamilienhauses in Eberswalde, 3-fach verglast" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                </div>
+                <div class="gi-info">
+                    <span class="gi-tag">Fensterbau · Aluminium</span>
+                    <span class="gi-title">Aluminiumfenster – Einfamilienhaus</span>
+                </div>
+            </article>
+            <article class="gi" data-cap="Individuelles Treppengeländer aus Schmiedeeisen – Altbausanierung Eberswalde" role="listitem" tabindex="0" aria-label="Schmiedeeisernes Treppengeländer, zum Vergrößern klicken">
+                <div class="gi-img-wrap">
+                    <img src="Treppengeländer.jpg" alt="Schmiedeeisernes Treppengeländer in einer Altbausanierung in Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                </div>
+                <div class="gi-info">
+                    <span class="gi-tag">Geländer · Schmiedeeisen</span>
+                    <span class="gi-title">Treppengeländer – Altbausanierung</span>
+                </div>
+            </article>
+            <article class="gi" data-cap="Elektrisches Schiebetor mit Fernsteuerung – Eberswalde" role="listitem" tabindex="0" aria-label="Elektrisches Einfahrtstor, zum Vergrößern klicken">
+                <div class="gi-img-wrap">
+                    <img src="Einfahrtstor.jpg" alt="Elektrisches Schiebetor mit Elektroantrieb für ein Privatgrundstück in Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                </div>
+                <div class="gi-info">
+                    <span class="gi-tag">Toranlage · Elektroantrieb</span>
+                    <span class="gi-title">Elektrisches Schiebetor</span>
+                </div>
+            </article>
+            <article class="gi" data-cap="Freitragender Anbaubalkon aus Edelstahl – Eberswalde" role="listitem" tabindex="0" aria-label="Freitragender Edelstahlbalkon, zum Vergrößern klicken">
+                <div class="gi-img-wrap">
+                    <img src="Edelstahlbalkon.jpg" alt="Freitragender Anbaubalkon aus Edelstahl im Obergeschoss, Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                </div>
+                <div class="gi-info">
+                    <span class="gi-tag">Anbaubalkon · Edelstahl</span>
+                    <span class="gi-title">Freitragender Balkon – Obergeschoss</span>
+                </div>
+            </article>
+            <article class="gi" data-cap="Doppelcarport aus Stahl, PV-Ready – Eberswalde" role="listitem" tabindex="0" aria-label="Doppelcarport PV-Ready, zum Vergrößern klicken">
+                <div class="gi-img-wrap">
+                    <img src="autocarport.jpg" alt="Doppelcarport aus verzinktem Stahl, photovoltaik-ready, Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                </div>
+                <div class="gi-info">
+                    <span class="gi-tag">Carport · Verzinkter Stahl</span>
+                    <span class="gi-title">Doppelcarport – PV-Ready</span>
+                </div>
+            </article>
+            <article class="gi" data-cap="Glasvordach aus VSG-Sicherheitsglas – Eingangsbereich Eberswalde" role="listitem" tabindex="0" aria-label="Glasvordach VSG, zum Vergrößern klicken">
+                <div class="gi-img-wrap">
+                    <img src="Glasvordach.jpg" alt="Glasvordach aus VSG-Sicherheitsglas am Eingangsbereich eines Wohnhauses, Eberswalde" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                </div>
+                <div class="gi-info">
+                    <span class="gi-tag">Vordach · VSG-Glas</span>
+                    <span class="gi-title">Glasvordach – Eingangssituation</span>
+                </div>
+            </article>
         </div>
         <div class="gallery-more reveal">
             <span class="gallery-count">6 von über 840 realisierten Projekten in Eberswalde und der Region</span>

@@ -195,11 +195,12 @@
     .seg-service-list li:hover { background: var(--teal-glow); }
     .seg-service-list li::after { content: '→'; color: var(--teal); font-size: 14px; }
     .seg-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-    .seg-stat { background: var(--white); padding: 24px 20px; }
+    .seg-stat { background: var(--white); padding: 24px 20px; min-width: 0; }
     .alt .seg-stat { background: var(--white); }
     .seg-stat-num { font-family: var(--serif); font-size: 36px; color: var(--teal); line-height: 1; margin-bottom: 8px; }
     .seg-stat-lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); }
-    .seg-visual { display: flex; flex-direction: column; gap: 20px; }
+    .seg-detail-content { min-width: 0; }
+    .seg-visual { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
     .seg-img { aspect-ratio: 16/10; overflow: hidden; background: linear-gradient(135deg, #c8d6d5 0%, #a0b8b7 100%); position: relative; }
     .seg-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .seg-img.placeholder { display: flex; align-items: center; justify-content: center; }
@@ -207,6 +208,7 @@
     .seg-highlight { background: var(--teal-dark); padding: 24px; color: #fff; }
     .seg-highlight strong { display: block; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 8px; }
     .seg-highlight p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.65); margin: 0; }
+    .seg-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
     /* MATERIALIEN */
     #materialien { border-top: 1px solid var(--line); }
@@ -311,6 +313,8 @@
         .mat-grid-3 { grid-template-columns: 1fr; }
         .why-grid { grid-template-columns: 1fr; }
         .seg-stats { grid-template-columns: 1fr 1fr; }
+        .seg-actions { flex-direction: column; align-items: stretch; }
+        .seg-actions .btn { justify-content: center; }
         .cta-inner { padding: 68px 24px; }
         .cta-actions { flex-direction: column; align-items: stretch; }
         .cta-actions .btn { justify-content: center; }
@@ -460,7 +464,7 @@
                 <li>Kein Subunternehmer – ein Ansprechpartner vom ersten Gespräch bis zur Abnahme</li>
                 <li>Bauanträge &amp; Statik koordinieren wir für Sie</li>
             </ul>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <div class="seg-actions">
                 <a href="leistungen.html#privatbau" class="btn btn-solid">Alle Privatleistungen</a>
                 <a href="anfrage.html" class="btn btn-ghost">Kostenlos anfragen <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
@@ -540,7 +544,7 @@
                 <li>Ein Ansprechpartner vom Aufmaß bis zur behördlichen Abnahme</li>
                 <li>Montage termingerecht – auch bei laufendem Betrieb</li>
             </ul>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <div class="seg-actions">
                 <a href="leistungen.html#gewerbebau" class="btn btn-solid">Alle Gewerbeleistungen</a>
                 <a href="anfrage.html" class="btn btn-ghost">Projekt besprechen <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
@@ -566,7 +570,7 @@
                 <li>±0,1 mm Fertigungstoleranz durch CNC-gesteuerte Maschinen</li>
                 <li>Einzelstücke bis Kleinserien (50 Stück) – keine Mindestmenge</li>
             </ul>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <div class="seg-actions">
                 <a href="anfrage.html" class="btn btn-solid">Sonderprojekt anfragen</a>
                 <a href="leistungen.html" class="btn btn-ghost">Leistungsübersicht <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
