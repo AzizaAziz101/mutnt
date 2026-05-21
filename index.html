@@ -271,9 +271,9 @@
     }
 
     /* MOBILE MENU */
-    #mobile-menu { position: fixed; inset: 0; z-index: 80; background: var(--ink); opacity: 0; visibility: hidden; transform: translateX(100%); transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), opacity 0.2s ease, visibility 0s linear 0.25s; display: flex; flex-direction: column; overflow: hidden; }
+    #mobile-menu { position: fixed; inset: 0; z-index: 80; background: var(--ink); opacity: 0; visibility: hidden; transform: scale(0.97); transition: opacity 0.32s cubic-bezier(0.16,1,0.3,1), transform 0.32s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0.32s; display: flex; flex-direction: column; overflow: hidden; }
     #mobile-menu::before { content: ''; position: absolute; top: -10%; right: 0; width: 320px; height: 320px; background: radial-gradient(circle, rgba(13,148,136,0.12) 0%, transparent 65%); pointer-events: none; }
-    #mobile-menu.open { transform: translateX(0); opacity: 1; visibility: visible; transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), opacity 0.2s ease, visibility 0s linear 0s; }
+    #mobile-menu.open { transform: scale(1); opacity: 1; visibility: visible; transition: opacity 0.32s cubic-bezier(0.16,1,0.3,1), transform 0.32s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0s; }
     .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: var(--nav-h); border-bottom: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; }
     .mob-logo { font-family: var(--serif); font-size: 20px; color: #fff; text-decoration: none; letter-spacing: -0.01em; }
     .mob-logo span { color: var(--teal-light); }
@@ -286,7 +286,7 @@
     .mob-main-link { flex: 1; display: flex; align-items: center; gap: 14px; padding: 18px 0; text-decoration: none; }
     .mob-main-left { display: flex; align-items: center; gap: 14px; }
     .mob-num { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); font-family: var(--serif); min-width: 20px; }
-    .mob-main-label { font-family: var(--serif); font-size: 21px; font-weight: 400; color: rgba(255,255,255,0.88); letter-spacing: -0.01em; line-height: 1; }
+    .mob-main-label { font-family: var(--serif); font-size: 23px; font-weight: 400; color: rgba(255,255,255,0.88); letter-spacing: -0.01em; line-height: 1; }
     .mob-main-link:hover .mob-main-label, .mob-main-link.active .mob-main-label { color: var(--teal-light); }
     .mob-toggle { background: none; border: none; cursor: pointer; padding: 18px 0 18px 16px; color: rgba(255,255,255,0.3); flex-shrink: 0; display: flex; align-items: center; transition: color 0.15s; }
     .mob-toggle:hover, .mob-toggle.open { color: var(--teal-light); }
@@ -294,7 +294,7 @@
     .mob-toggle.open svg { transform: rotate(180deg); }
     .mob-sub-list { list-style: none; padding: 4px 0 14px; display: none; }
     .mob-sub-list.open { display: block; }
-    .mob-sub-list li a { display: flex; align-items: center; gap: 10px; padding: 9px 0 9px 34px; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+    .mob-sub-list li a { display: flex; align-items: center; gap: 10px; padding: 9px 0 9px 34px; font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
     .mob-sub-list li a:hover { color: var(--teal-light); }
     .mob-bottom { padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; }
     .mob-bottom .btn-cta-accent { width: 100%; justify-content: center; font-size: 14px; padding: 15px 28px; }
@@ -492,17 +492,8 @@
         display: flex;
         flex-direction: column;
         transition: background 0.2s;
-        position: relative;
     }
-    .gi::after {
-        content: '';
-        position: absolute;
-        bottom: 0; left: 0;
-        width: 0; height: 2px;
-        background: var(--teal);
-        transition: width 0.3s;
-    }
-    .gi:hover::after { width: 100%; }
+    .gi:hover { background: var(--mist); }
     .gi-img-wrap {
         overflow: hidden;
         aspect-ratio: 4/3;
@@ -815,7 +806,7 @@
     <div class="mob-header">
         <a href="index.html" class="mob-logo">Daniel Meyer<span>.</span></a>
         <button id="mob-close" aria-label="Menü schließen">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
     </div>
     <div class="mob-nav">
@@ -945,7 +936,7 @@
         <div class="gallery-grid reveal rv1" role="list" aria-label="Referenzbilder">
             <article class="gi" data-cap="Maßgefertigte Aluminiumfenster – Einfamilienhaus Eberswalde" role="listitem" tabindex="0" aria-label="Aluminiumfenster – Einfamilienhaus, zum Vergrößern klicken">
                 <div class="gi-img-wrap">
-                    <img src="Fenster.jpg" alt="Maßgefertigte Aluminiumfenster eines Einfamilienhauses in Eberswalde, 3-fach verglast" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
+                    <img src="aluminiumfenster.jpg" alt="Maßgefertigte Aluminiumfenster eines Einfamilienhauses in Eberswalde, 3-fach verglast" loading="lazy" onerror="this.parentElement.style.background='#c8d6d5'">
                 </div>
                 <div class="gi-info">
                     <span class="gi-tag">Fensterbau · Aluminium</span>
