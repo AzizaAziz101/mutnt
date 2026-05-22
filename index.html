@@ -372,8 +372,6 @@
         color: rgba(255,255,255,0.58);
         max-width: 48ch;
         margin-bottom: 40px;
-        border-left: 2px solid rgba(255,255,255,0.14);
-        padding-left: 18px;
     }
 
     .hero-actions { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
@@ -407,7 +405,7 @@
     }
     .trust-item { display: flex; flex-direction: column; gap: 4px; }
     .trust-item strong { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
-    .trust-item span { font-size: 14px; color: rgba(255,255,255,0.5); }
+    .trust-item > span { font-size: 14px; color: rgba(255,255,255,0.5); }
 
     /* Hero bottom marquee strip */
     .hero-strip {
@@ -431,6 +429,7 @@
         }
         .hero-card { height: clamp(230px, 54vw, 360px); }
         .hero-trust { display: none; }
+        .hero-sub { display: none; }
     }
 
     /* ═══════════════════════════════════════
