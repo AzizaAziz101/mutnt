@@ -41,32 +41,40 @@
 
     <style>
     :root {
-        --teal: #0D9488; --teal-light: #14B8A6; --teal-dark: #0F766E;
-        --teal-glow: rgba(13,148,136,0.08); --ink: #111827; --ink-soft: #374151;
-        --mist: #F9FAFB; --line: #E5E7EB; --white: #ffffff;
+        --teal:       #0D9488;
+        --teal-light: #14B8A6;
+        --teal-dark:  #0F766E;
+        --teal-bg:    #F0FDFB;
+        --teal-glow:  rgba(13,148,136,0.06);
+        --ink:        #1C2329;
+        --ink-soft:   #4B5563;
+        --mist:       #F7F8F9;
+        --line:       #E5E7EB;
+        --white:      #ffffff;
+        --footer-bg:  #F3F4F6;
         --serif: 'Space Grotesk', system-ui, sans-serif;
-        --sans: 'DM Sans', system-ui, sans-serif;
-        --nav-h: 76px;
+        --sans:  'DM Sans', system-ui, sans-serif;
+        --nav-h: 72px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 24px); }
-    body { font-family: var(--sans); font-size: 18px; background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.75; }
+    body { font-family: var(--sans); font-size: 17px; background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.8; }
 
-    .label { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
-    .label::before { content: ''; display: block; width: 20px; height: 1.5px; background: var(--teal); flex-shrink: 0; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; text-decoration: none; white-space: nowrap; }
-    .btn-solid { background: var(--teal); color: var(--white); padding: 15px 32px; }
+    .label { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); }
+    .label::before { content: ''; display: block; width: 18px; height: 1px; background: var(--teal); flex-shrink: 0; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; text-decoration: none; white-space: nowrap; }
+    .btn-solid { background: var(--teal); color: var(--white); padding: 14px 28px; }
     .btn-solid:hover { background: var(--teal-dark); }
-    .btn-ghost { color: var(--teal); border-bottom: 1.5px solid var(--teal); padding-bottom: 3px; }
-    .btn-ghost:hover { gap: 14px; }
-    .btn-outline-white { color: var(--white); border: 1.5px solid rgba(255,255,255,0.28); padding: 15px 32px; }
-    .btn-outline-white:hover { border-color: rgba(255,255,255,0.7); }
-    .btn-cta-accent { background: var(--teal-light); color: var(--teal-dark); padding: 16px 36px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
-    .btn-cta-accent:hover { background: #18c0c0; }
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .btn-ghost { color: var(--teal); border-bottom: 1px solid var(--teal); padding-bottom: 2px; }
+    .btn-ghost:hover { gap: 12px; }
+    .btn-outline-white { color: var(--ink); border: 1px solid var(--line); padding: 14px 28px; }
+    .btn-outline-white:hover { border-color: var(--ink-soft); }
+    .btn-cta-accent { background: var(--teal); color: var(--white); padding: 14px 28px; }
+    .btn-cta-accent:hover { background: var(--teal-dark); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
     .reveal.in { opacity: 1; transform: none; }
     .rv1 { transition-delay: 0.08s; } .rv2 { transition-delay: 0.16s; } .rv3 { transition-delay: 0.24s; }
-    h2.sh { font-family: var(--serif); font-size: clamp(2rem, 3.4vw, 3rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-top: 10px; }
+    h2.sh { font-family: var(--serif); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; margin-top: 10px; }
     .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; flex-wrap: wrap; gap: 16px; }
     svg { display: block; } img { max-width: 100%; height: auto; }
 
@@ -74,141 +82,141 @@
     #nav { position: fixed; top: 0; inset-x: 0; z-index: 60; background: rgba(255,255,255,0.98); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); transition: box-shadow 0.3s; }
     #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
     .nav-inner { max-width: 1340px; margin: 0 auto; padding: 0 40px; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: var(--serif); font-size: 22px; color: var(--ink); text-decoration: none; flex-shrink: 0; line-height: 1; letter-spacing: -0.01em; }
+    .nav-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; flex-shrink: 0; line-height: 1; letter-spacing: -0.01em; }
     .nav-logo span { color: var(--teal); }
-    #nav-items { display: flex; list-style: none; gap: 44px; margin-left: auto; padding-right: 44px; padding-left: 80px; align-items: center; }
-    .menu-item > a { font-size: 15px; font-weight: 600; letter-spacing: 0.03em; color: var(--ink-soft); text-decoration: none; padding-bottom: 4px; transition: color 0.15s; display: block; border-bottom: 2px solid transparent; }
+    #nav-items { display: flex; list-style: none; gap: 40px; margin-left: auto; padding-right: 40px; padding-left: 64px; align-items: center; }
+    .menu-item > a { font-size: 14px; font-weight: 500; letter-spacing: 0.02em; color: var(--ink-soft); text-decoration: none; padding-bottom: 4px; transition: color 0.15s; display: block; border-bottom: 1.5px solid transparent; }
     .menu-item > a:hover, .menu-item.active > a { color: var(--teal); border-bottom-color: var(--teal); }
-    .menu-item > a::after { display: none; }
-    #dropdown { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); box-shadow: 0 20px 48px rgba(15,23,42,0.08); display: none; justify-content: center; z-index: 50; }
+    #dropdown { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); box-shadow: 0 20px 48px rgba(15,23,42,0.06); display: none; justify-content: center; z-index: 50; }
     #dropdown.show { display: flex; }
-    #dropdown-content { max-width: 1340px; width: 100%; padding: 40px; display: flex; gap: 56px; }
+    #dropdown-content { max-width: 1340px; width: 100%; padding: 36px 40px; display: flex; gap: 48px; }
     .drop-col { flex: 1; }
-    .drop-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--teal); border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 18px; }
-    .drop-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .drop-col ul li a { font-size: 15px; font-weight: 500; color: var(--ink-soft); text-decoration: none; transition: color 0.15s, padding-left 0.15s; display: inline-block; }
+    .drop-col h4 { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 16px; }
+    .drop-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .drop-col ul li a { font-size: 14px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.15s, padding-left 0.15s; display: inline-block; }
     .drop-col ul li a:hover { color: var(--teal); padding-left: 4px; }
     .nav-right { display: flex; align-items: center; gap: 16px; }
     #nav-cta { display: none; }
     #ham { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; color: var(--ink); }
-    .bar { display: block; width: 24px; height: 2px; background: currentColor; border-radius: 1px; transition: all 0.3s ease; transform-origin: center; }
-    #ham.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .bar { display: block; width: 22px; height: 1.5px; background: currentColor; border-radius: 1px; transition: all 0.3s ease; transform-origin: center; }
+    #ham.open .bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     #ham.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    #ham.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #ham.open .bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
     @media (max-width: 1020px) { #nav-items { display: none; } #ham { display: flex; } .nav-inner { padding: 0 24px; } #nav-cta { display: none !important; } }
 
     /* MOBILE MENU */
-    #mobile-menu { position: fixed; inset: 0; z-index: 80; background: var(--ink); opacity: 0; visibility: hidden; transform: scale(0.97); transition: opacity 0.32s cubic-bezier(0.16,1,0.3,1), transform 0.32s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0.32s; display: flex; flex-direction: column; overflow: hidden; }
-    #mobile-menu::before { content: ''; position: absolute; top: -10%; right: 0; width: 320px; height: 320px; background: radial-gradient(circle, rgba(13,148,136,0.12) 0%, transparent 65%); pointer-events: none; }
-    #mobile-menu.open { transform: scale(1); opacity: 1; visibility: visible; transition: opacity 0.32s cubic-bezier(0.16,1,0.3,1), transform 0.32s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0s; }
-    .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: var(--nav-h); border-bottom: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; }
-    .mob-logo { font-family: var(--serif); font-size: 20px; color: #fff; text-decoration: none; letter-spacing: -0.01em; }
-    .mob-logo span { color: var(--teal-light); }
-    #mob-close { background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.55); padding: 8px; display: flex; align-items: center; justify-content: center; transition: color 0.15s; }
-    #mob-close:hover { color: #fff; }
+    #mobile-menu { position: fixed; inset: 0; z-index: 80; background: var(--white); opacity: 0; visibility: hidden; transform: scale(0.98); transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1), transform 0.28s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0.28s; display: flex; flex-direction: column; overflow: hidden; }
+    #mobile-menu.open { transform: scale(1); opacity: 1; visibility: visible; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1), transform 0.28s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0s; }
+    .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: var(--nav-h); border-bottom: 1px solid var(--line); flex-shrink: 0; }
+    .mob-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+    .mob-logo span { color: var(--teal); }
+    #mob-close { background: none; border: none; cursor: pointer; color: var(--ink-soft); padding: 8px; display: flex; align-items: center; justify-content: center; transition: color 0.15s; }
+    #mob-close:hover { color: var(--ink); }
     .mob-nav { padding: 0 24px; flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
     #mobile-nav-items { list-style: none; display: flex; flex-direction: column; }
-    .mob-row { display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    #mobile-nav-items > li:first-child .mob-row { border-top: 1px solid rgba(255,255,255,0.07); }
+    .mob-row { display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+    #mobile-nav-items > li:first-child .mob-row { border-top: 1px solid var(--line); }
     .mob-main-link { flex: 1; display: flex; align-items: center; gap: 14px; padding: 18px 0; text-decoration: none; }
     .mob-main-left { display: flex; align-items: center; gap: 14px; }
-    .mob-num { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); font-family: var(--serif); min-width: 20px; }
-    .mob-main-label { font-family: var(--serif); font-size: 23px; font-weight: 400; color: rgba(255,255,255,0.88); letter-spacing: -0.01em; line-height: 1; }
-    .mob-main-link:hover .mob-main-label, .mob-main-link.active .mob-main-label { color: var(--teal-light); }
-    .mob-toggle { background: none; border: none; cursor: pointer; padding: 18px 0 18px 16px; color: rgba(255,255,255,0.3); flex-shrink: 0; display: flex; align-items: center; transition: color 0.15s; }
-    .mob-toggle:hover, .mob-toggle.open { color: var(--teal-light); }
+    .mob-num { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--teal); font-family: var(--serif); min-width: 20px; }
+    .mob-main-label { font-family: var(--serif); font-size: 21px; font-weight: 400; color: var(--ink); letter-spacing: -0.01em; line-height: 1; }
+    .mob-main-link:hover .mob-main-label, .mob-main-link.active .mob-main-label { color: var(--teal); }
+    .mob-toggle { background: none; border: none; cursor: pointer; padding: 18px 0 18px 16px; color: var(--ink-soft); flex-shrink: 0; display: flex; align-items: center; transition: color 0.15s; }
+    .mob-toggle:hover, .mob-toggle.open { color: var(--teal); }
     .mob-toggle svg { transition: transform 0.25s ease; }
     .mob-toggle.open svg { transform: rotate(180deg); }
     .mob-sub-list { list-style: none; padding: 4px 0 14px; display: none; }
     .mob-sub-list.open { display: block; }
-    .mob-sub-list li a { display: flex; align-items: center; gap: 10px; padding: 9px 0 9px 34px; font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
-    .mob-sub-list li a:hover { color: var(--teal-light); }
-    .mob-bottom { padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; }
-    .mob-bottom .btn-cta-accent { width: 100%; justify-content: center; font-size: 14px; padding: 15px 28px; }
+    .mob-sub-list li a { display: flex; align-items: center; gap: 10px; padding: 8px 0 8px 34px; font-size: 14px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
+    .mob-sub-list li a:hover { color: var(--teal); }
+    .mob-bottom { padding: 20px 24px; border-top: 1px solid var(--line); flex-shrink: 0; }
+    .mob-bottom .btn-cta-accent { width: 100%; justify-content: center; font-size: 13px; padding: 14px 28px; }
     .mob-legal { display: flex; gap: 20px; margin-top: 14px; }
-    .mob-legal a { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.22); text-decoration: none; transition: color 0.15s; }
-    .mob-legal a:hover { color: rgba(255,255,255,0.55); }
+    .mob-legal a { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
+    .mob-legal a:hover { color: var(--ink); }
 
     /* PAGE HERO */
-    .page-hero { padding-top: var(--nav-h); background: var(--ink); position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(13,148,136,0.15) 0%, transparent 65%); pointer-events: none; }
-    .page-hero-inner { max-width: 1340px; margin: 0 auto; padding: 60px 40px 56px; position: relative; z-index: 1; }
-    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 24px; }
-    .breadcrumb a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.15s; }
-    .breadcrumb a:hover { color: rgba(255,255,255,0.7); }
-    .breadcrumb .bc-active { color: var(--teal-light); }
-    .hero-label-light { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.32); margin-bottom: 14px; }
-    .hero-label-light::before { content: ''; display: block; width: 20px; height: 1.5px; background: rgba(255,255,255,0.32); flex-shrink: 0; }
-    .page-hero-h1 { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 400; line-height: 1.08; letter-spacing: -0.025em; color: #fff; margin: 14px 0 18px; }
-    .page-hero-h1 em { font-style: italic; color: var(--teal-light); }
-    .page-hero-sub { font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.5); max-width: 56ch; margin-bottom: 32px; }
+    .page-hero { padding-top: var(--nav-h); background: var(--white); border-bottom: 1px solid var(--line); }
+    .page-hero-inner { max-width: 1340px; margin: 0 auto; padding: 56px 40px 52px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 22px; }
+    .breadcrumb a { color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
+    .breadcrumb a:hover { color: var(--teal); }
+    .breadcrumb .bc-active { color: var(--teal); }
+    .page-hero-h1 { font-family: var(--serif); font-size: clamp(1.7rem, 3.2vw, 2.6rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin: 14px 0 16px; }
+    .page-hero-h1 em { font-style: normal; color: var(--teal); }
+    .page-hero-sub { font-size: 16px; line-height: 1.8; color: var(--ink-soft); max-width: 56ch; margin-bottom: 30px; }
 
     /* CONTACT CARDS */
     #anfahrt { border-top: 1px solid var(--line); }
-    .contact-inner { max-width: 1340px; margin: 0 auto; padding: 76px 40px; }
+    .contact-inner { max-width: 1340px; margin: 0 auto; padding: 72px 40px; }
     .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 44px; }
     .contact-card { background: var(--white); padding: 32px 28px; position: relative; transition: background 0.2s; }
     .contact-card:hover { background: var(--teal-glow); }
     .contact-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.3s; }
     .contact-card:hover::after { width: 100%; }
-    .cc-icon { width: 40px; height: 40px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--teal); }
-    .cc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
-    .cc-main { font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.4; margin-bottom: 6px; }
+    .cc-icon { width: 36px; height: 36px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--teal); }
+    .cc-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .cc-main { font-family: var(--serif); font-size: 17px; color: var(--ink); line-height: 1.45; margin-bottom: 6px; }
     .cc-sub { font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
-    .cc-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; border-bottom: 1.5px solid var(--teal); padding-bottom: 2px; transition: gap 0.15s; }
+    .cc-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); text-decoration: none; border-bottom: 1px solid var(--teal); padding-bottom: 2px; transition: gap 0.15s; }
     .cc-link:hover { gap: 10px; }
+
+    /* MAP */
+    .map-placeholder { margin-top: 1px; background: var(--mist); border: 1px solid var(--line); border-top: none; height: 220px; display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--ink-soft); }
+    .map-placeholder span { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
 
     /* HOURS */
     #oeffnungszeiten { border-top: 1px solid var(--line); background: var(--mist); }
-    .hours-inner { max-width: 1340px; margin: 0 auto; padding: 72px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .hours-content h2 { font-family: var(--serif); font-size: clamp(1.7rem, 2.8vw, 2.4rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin: 10px 0 18px; }
+    .hours-inner { max-width: 1340px; margin: 0 auto; padding: 72px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .hours-content h2.sh { margin-bottom: 16px; }
     .hours-content p { font-size: 16px; line-height: 1.8; color: var(--ink-soft); }
-    .hours-table { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--line); background: var(--white); }
-    .hours-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 22px; border-bottom: 1px solid var(--line); font-size: 15px; }
+    .hours-content p + p { margin-top: 12px; }
+    .hours-table { display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--white); }
+    .hours-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 22px; border-bottom: 1px solid var(--line); font-size: 15px; }
     .hours-row:last-child { border-bottom: none; }
-    .hours-day { font-weight: 600; color: var(--ink); }
+    .hours-day { font-weight: 500; color: var(--ink); }
     .hours-time { color: var(--ink-soft); }
-    .hours-time.open { color: var(--teal); font-weight: 600; }
+    .hours-time.open { color: var(--teal); font-weight: 500; }
     .hours-time.closed { color: var(--ink-soft); opacity: 0.5; }
-    .hours-note { margin-top: 14px; padding: 14px 18px; border-left: 2px solid var(--teal); background: rgba(13,148,136,0.06); font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+    .hours-note { margin-top: 14px; padding: 14px 16px; border-left: 2px solid var(--teal); background: rgba(13,148,136,0.05); font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
 
     /* STEPS */
     #naechste-schritte { border-top: 1px solid var(--line); }
     .steps-inner { max-width: 1340px; margin: 0 auto; padding: 72px 40px; }
     .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 44px; }
-    .step-item { position: relative; }
-    .step-num { font-family: var(--serif); font-size: 56px; font-weight: 400; color: var(--teal); opacity: 0.14; line-height: 1; margin-bottom: 16px; letter-spacing: -0.03em; }
-    .step-item h3 { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
-    .step-item p { font-size: 15px; line-height: 1.7; color: var(--ink-soft); }
-    .step-connector { position: absolute; top: 28px; right: -24px; width: 48px; height: 1px; background: var(--line); }
+    .step-item { position: relative; padding-top: 0; }
+    .step-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .step-tag::before { content: ''; display: block; width: 14px; height: 1px; background: var(--teal); }
+    .step-item h3 { font-family: var(--serif); font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+    .step-item p { font-size: 15px; line-height: 1.75; color: var(--ink-soft); }
+    .step-connector { position: absolute; top: 6px; right: -24px; width: 48px; height: 1px; background: var(--line); }
     .step-item:last-child .step-connector { display: none; }
 
     /* CTA */
-    #cta { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
-    #cta::before { content: ''; position: absolute; top: -40%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(20,184,166,0.13) 0%, transparent 70%); pointer-events: none; }
-    .cta-inner { max-width: 1340px; margin: 0 auto; padding: 68px 40px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
-    .cta-lbl { color: rgba(255,255,255,0.35); }
-    .cta-lbl::before { background: rgba(255,255,255,0.35); }
-    .cta-h { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 400; color: #fff; line-height: 1.12; letter-spacing: -0.02em; margin: 12px 0 14px; }
-    .cta-h em { font-style: italic; color: var(--teal-light); }
-    .cta-sub { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 48ch; }
-    .cta-btns { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
+    #cta { background: var(--teal-bg); border-top: 1px solid rgba(13,148,136,0.12); border-bottom: 1px solid rgba(13,148,136,0.12); }
+    .cta-inner { max-width: 1340px; margin: 0 auto; padding: 64px 40px; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+    .cta-lbl { color: var(--teal); }
+    .cta-lbl::before { background: var(--teal); }
+    .cta-h { font-family: var(--serif); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; color: var(--ink); line-height: 1.2; letter-spacing: -0.01em; margin: 10px 0 12px; }
+    .cta-h em { font-style: normal; color: var(--teal); }
+    .cta-sub { font-size: 15px; color: var(--ink-soft); line-height: 1.75; max-width: 52ch; }
+    .cta-btns { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
 
     /* FOOTER */
-    #footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.07); }
+    #footer { background: var(--footer-bg); border-top: 1px solid var(--line); }
     .footer-inner { max-width: 1340px; margin: 0 auto; padding: 48px 40px 32px; }
-    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 24px; flex-wrap: wrap; }
-    .footer-logo { font-family: var(--serif); font-size: 20px; color: #fff; text-decoration: none; display: block; }
-    .footer-logo span { color: var(--teal-light); }
-    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 5px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 30px; border-bottom: 1px solid var(--line); margin-bottom: 22px; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--serif); font-size: 19px; color: var(--ink); text-decoration: none; display: block; letter-spacing: -0.01em; }
+    .footer-logo span { color: var(--teal); }
+    .footer-tagline { font-size: 13px; color: var(--ink-soft); margin-top: 5px; }
     .footer-cols { display: flex; gap: 48px; flex-wrap: wrap; }
-    .footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 12px; }
-    .footer-col p { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.65; }
+    .footer-col h5 { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+    .footer-col p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.18); letter-spacing: 0.1em; text-transform: uppercase; }
+    .footer-copy { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.06em; }
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.28); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--teal-light); }
+    .footer-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal); }
 
     /* RESPONSIVE */
     @media (max-width: 1020px) {
@@ -217,11 +225,11 @@
         .contact-grid { grid-template-columns: 1fr 1fr; }
         .hours-inner { grid-template-columns: 1fr; gap: 36px; padding: 52px 24px; }
         .steps-inner { padding: 52px 24px; }
-        .cta-inner { grid-template-columns: 1fr; gap: 32px; padding: 52px 24px; }
+        .cta-inner { grid-template-columns: 1fr; gap: 28px; padding: 52px 24px; }
         .footer-inner { padding: 40px 24px 28px; }
     }
-    @media (max-width: 720px) {
-        .steps-grid { grid-template-columns: 1fr; gap: 28px; }
+    @media (max-width: 800px) {
+        .steps-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
         .step-connector { display: none; }
     }
     @media (max-width: 640px) {
@@ -229,10 +237,10 @@
         .cta-btns { flex-direction: row; flex-wrap: wrap; }
     }
     @media (max-width: 480px) {
-        h2.sh { font-size: clamp(1.6rem, 6vw, 2.2rem); }
         .page-hero-inner { padding: 40px 20px 36px; }
         .contact-inner, .hours-inner, .steps-inner, .cta-inner { padding: 44px 20px; }
         .footer-inner { padding: 32px 20px 24px; }
+        .steps-grid { grid-template-columns: 1fr; }
     }
     </style>
 </head>
@@ -261,7 +269,7 @@
     <div class="mob-header">
         <a href="index.html" class="mob-logo">Daniel Meyer<span>.</span></a>
         <button id="mob-close" aria-label="Menü schließen">
-            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
     </div>
     <div class="mob-nav">
@@ -270,7 +278,7 @@
     <div class="mob-bottom">
         <a href="anfrage.html" class="btn btn-cta-accent">
             Projekt anfragen
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <div class="mob-legal">
             <a href="impressum.html">Impressum</a>
@@ -288,7 +296,7 @@
                 <span>›</span>
                 <span class="bc-active">Kontakt</span>
             </nav>
-            <div class="hero-label-light">Meisterbetrieb · Eberswalde · Brandenburg</div>
+            <div class="label">Meisterbetrieb · Eberswalde · Brandenburg</div>
             <h1 class="page-hero-h1" id="page-h1">Sprechen Sie mit uns –<br><em>wir sind für Sie da.</em></h1>
             <p class="page-hero-sub">
                 Kurze Wege, direkte Antworten. Ob Anfrage, Rückruf oder Besuch in der Werkstatt – wir melden uns innerhalb eines Werktages.
@@ -296,7 +304,7 @@
             <div style="display:flex;gap:12px;flex-wrap:wrap;">
                 <a href="anfrage.html" class="btn btn-cta-accent">
                     Projekt anfragen
-                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <a href="#anfahrt" class="btn btn-outline-white">Adresse &amp; Anfahrt</a>
             </div>
@@ -316,46 +324,44 @@
         <div class="contact-grid">
             <div class="contact-card reveal">
                 <div class="cc-icon" aria-hidden="true">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                 </div>
                 <div class="cc-label">Adresse</div>
                 <div class="cc-main">Musterstraße 12<br>16225 Eberswalde</div>
                 <p class="cc-sub">Brandenburg · Deutschland<br>Barnim</p>
                 <a href="#anfahrt" class="cc-link">
                     Anfahrt anzeigen
-                    <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
             <div class="contact-card reveal rv1">
                 <div class="cc-icon" aria-hidden="true">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 </div>
                 <div class="cc-label">Telefon</div>
                 <div class="cc-main">+49 (0) 3334 00 00 00</div>
                 <p class="cc-sub">Mo – Fr, 07:30 – 17:00 Uhr<br>Direkt mit dem Meister</p>
                 <a href="tel:+49333400000" class="cc-link">
                     Jetzt anrufen
-                    <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
             <div class="contact-card reveal rv2">
                 <div class="cc-icon" aria-hidden="true">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
                 <div class="cc-label">E-Mail</div>
                 <div class="cc-main">info@metallbau-meyer<br>-eberswalde.de</div>
                 <p class="cc-sub">Antwort innerhalb eines Werktages<br>Anhänge willkommen</p>
                 <a href="mailto:info@metallbau-meyer-eberswalde.de" class="cc-link">
                     E-Mail schreiben
-                    <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
         </div>
-
-        <!-- MAP PLACEHOLDER -->
-        <div class="reveal" style="margin-top:1px;background:var(--mist);border:1px solid var(--line);border-top:none;height:240px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--ink-soft);" aria-label="Kartenbereich">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <span style="font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">Karte · Metallbau Meyer · Eberswalde</span>
+        <div class="map-placeholder reveal" aria-label="Kartenbereich">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Karte · Metallbau Meyer · Eberswalde</span>
         </div>
     </div>
 </section>
@@ -369,12 +375,12 @@
             <p style="margin-top:16px;">
                 Unsere Werkstatt und unser Büro sind zu den unten genannten Zeiten geöffnet. Außerhalb der Öffnungszeiten können Sie uns jederzeit per E-Mail erreichen.
             </p>
-            <p style="margin-top:12px;">
+            <p>
                 Für dringende Reparatur- und Notfallanfragen stehen wir auf Vereinbarung auch außerhalb dieser Zeiten zur Verfügung.
             </p>
-            <a href="anfrage.html" class="btn btn-ghost" style="margin-top:28px;">
+            <a href="anfrage.html" class="btn btn-ghost" style="margin-top:24px;">
                 Anfrage stellen
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
         </div>
         <div class="reveal rv1">
@@ -426,19 +432,19 @@
         </div>
         <div class="steps-grid">
             <div class="step-item reveal">
-                <div class="step-num">01</div>
+                <div class="step-tag">Schritt 01</div>
                 <h3>Anfrage &amp; erstes Gespräch</h3>
                 <p>Sie kontaktieren uns per Telefon, E-Mail oder über das Anfrageformular. Wir melden uns innerhalb eines Werktages – persönlich, nicht per Autoresponder.</p>
                 <div class="step-connector" aria-hidden="true"></div>
             </div>
             <div class="step-item reveal rv1">
-                <div class="step-num">02</div>
+                <div class="step-tag">Schritt 02</div>
                 <h3>Vor-Ort-Termin &amp; Angebot</h3>
                 <p>Wir schauen uns Ihr Projekt an und erstellen ein verbindliches Angebot mit realistischem Zeitplan. Keine versteckten Kosten, kein Kleingedrucktes.</p>
                 <div class="step-connector" aria-hidden="true"></div>
             </div>
             <div class="step-item reveal rv2">
-                <div class="step-num">03</div>
+                <div class="step-tag">Schritt 03</div>
                 <h3>Fertigung &amp; Montage</h3>
                 <p>Ihr Projekt wird in unserer Werkstatt in Eberswalde gefertigt und von unserem eigenen Team montiert. Kein Subunternehmer, volle Qualitätskontrolle.</p>
             </div>
@@ -457,7 +463,7 @@
         <div class="cta-btns reveal rv1">
             <a href="anfrage.html" class="btn btn-cta-accent">
                 Projekt anfragen
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="tel:+49333400000" class="btn btn-outline-white">Direkt anrufen</a>
         </div>
@@ -491,9 +497,9 @@
 <script>
 const MENU_CONTENT = {
     Leistungen: {
-        firstUl:  { title: 'Privat',    items: [['Geländer & Brüstungen','leistungen.html#gelaender-anker'], ['Stahltreppen','leistungen.html#treppen-anker'], ['Tor- & Zaunanlagen','leistungen.html#tore-anker'], ['Anbaubalkone','leistungen.html#privatbau'], ['Aluminiumfenster','leistungen.html#privatbau']] },
+        firstUl:  { title: 'Privat',    items: [['Geländer & Brüstungen','leistungen.html#privatbau'], ['Stahltreppen','leistungen.html#privatbau'], ['Tor- & Zaunanlagen','leistungen.html#privatbau'], ['Anbaubalkone','leistungen.html#privatbau'], ['Aluminiumfenster','leistungen.html#privatbau']] },
         secondUl: { title: 'Gewerbe',   items: [['Stahlkonstruktionen','leistungen.html#gewerbebau'], ['Wartungsbühnen','leistungen.html#gewerbebau'], ['Rammschutz','leistungen.html#gewerbebau'], ['Hallentore','leistungen.html#gewerbebau']] },
-        thirdUl:  { title: 'Fertigung', items: [['Laserschneiden','leistungen.html#fertigung-verfahren'], ['CNC-Biegen','leistungen.html#fertigung-verfahren'], ['Schweißarbeiten','leistungen.html#fertigung-verfahren']] }
+        thirdUl:  { title: 'Fertigung', items: [['Laserschneiden','leistungen.html#fertigung'], ['CNC-Biegen','leistungen.html#fertigung'], ['Schweißarbeiten','leistungen.html#fertigung']] }
     },
     Lösungen: {
         firstUl:  { title: 'Segmente',    items: [['Privatbau','loesungen.html#privat'], ['Gewerbebau','loesungen.html#gewerbe'], ['Industrie & Sonderbau','loesungen.html#industrie']] },
@@ -538,7 +544,7 @@ menuItems.forEach(item => item.addEventListener('mouseenter', () => openDropdown
 document.getElementById('nav').addEventListener('mouseleave', closeDropdown);
 
 const MOB_NAV = [
-    { label: 'Leistungen',  href: 'leistungen.html',  num: '01', sub: [['Geländer & Brüstungen','leistungen.html#gelaender-anker'],['Stahltreppen','leistungen.html#treppen-anker'],['Tor- & Zaunanlagen','leistungen.html#tore-anker'],['Gewerbebau','leistungen.html#gewerbebau']] },
+    { label: 'Leistungen',  href: 'leistungen.html',  num: '01', sub: [['Geländer & Brüstungen','leistungen.html#privatbau'],['Stahltreppen','leistungen.html#privatbau'],['Tor- & Zaunanlagen','leistungen.html#privatbau'],['Gewerbebau','leistungen.html#gewerbebau']] },
     { label: 'Lösungen',    href: 'loesungen.html',   num: '02', sub: [['Privatbau','loesungen.html#privat'],['Gewerbebau','loesungen.html#gewerbe'],['Industrie','loesungen.html#industrie']] },
     { label: 'Unternehmen', href: 'unternehmen.html', num: '03', sub: [['Geschichte','unternehmen.html#geschichte'],['Das Team','unternehmen.html#team'],['Zertifikate','unternehmen.html#zertifikate']] },
     { label: 'Kontakt',     href: 'kontakt.html',     num: '04', sub: [['Adresse & Anfahrt','kontakt.html#anfahrt'],['Öffnungszeiten','kontakt.html#oeffnungszeiten']] },
@@ -549,7 +555,7 @@ MOB_NAV.forEach(item => {
     const li = document.createElement('li');
     const isActive = item.href === currentPage;
     let html = `<div class="mob-row"><a href="${item.href}" class="mob-main-link${isActive ? ' active' : ''}"><span class="mob-main-left"><span class="mob-num">${item.num}</span><span class="mob-main-label">${item.label}</span></span></a>`;
-    if (item.sub.length) { html += `<button class="mob-toggle" aria-label="Untermenü ${item.label}" aria-expanded="false"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></button>`; }
+    if (item.sub.length) { html += `<button class="mob-toggle" aria-label="Untermenü ${item.label}" aria-expanded="false"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></button>`; }
     html += `</div>`;
     if (item.sub.length) { html += `<ul class="mob-sub-list">${item.sub.map(s => `<li><a href="${s[1]}">${s[0]}</a></li>`).join('')}</ul>`; }
     li.innerHTML = html;
@@ -565,6 +571,7 @@ MOB_NAV.forEach(item => {
     }
     mobileNav.appendChild(li);
 });
+
 const ham      = document.getElementById('ham');
 const mobClose = document.getElementById('mob-close');
 const mobileMenu = document.getElementById('mobile-menu');
