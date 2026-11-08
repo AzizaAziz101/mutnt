@@ -1,723 +1,153 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Leistungen | Metallbau Meyer – Geländer, Tore, Treppen & Stahlbau Eberswalde</title>
-    <meta name="description" content="Alle Leistungen von Metallbau Meyer: Geländer, Tore, Stahltreppen, Aluminiumfenster, Anbaubalkone & Stahlkonstruktionen. Meisterbetrieb Eberswalde seit 1988. DIN EN 1090 EXC2.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://metallbau-meyer-eberswalde.de/leistungen.html">
-    <meta property="og:title" content="Leistungen | Metallbau Meyer Eberswalde">
-    <meta property="og:description" content="Geländer, Tore, Stahltreppen, Aluminiumfenster & Stahlkonstruktionen – präzise gefertigt in Eberswalde. Meisterbetrieb seit 1988, DIN EN 1090 EXC2.">
-    <meta property="og:type" content="website">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Metallbau Meyer",
-        "description": "Meisterbetrieb für Metallbau und Stahlbau in Eberswalde seit 1988",
-        "url": "https://metallbau-meyer-eberswalde.de",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Eberswalde",
-            "addressRegion": "Brandenburg",
-            "addressCountry": "DE"
-        }
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-
-    <style>
-    :root {
-        --teal:       #0D9488;
-        --teal-light: #14B8A6;
-        --teal-dark:  #0F766E;
-        --teal-bg:    #F0FDFB;
-        --teal-glow:  rgba(13,148,136,0.06);
-        --ink:        #1C2329;
-        --ink-soft:   #4B5563;
-        --mist:       #F7F8F9;
-        --line:       #E5E7EB;
-        --white:      #ffffff;
-        --footer-bg:  #F3F4F6;
-        --serif: 'Space Grotesk', system-ui, sans-serif;
-        --sans:  'DM Sans', system-ui, sans-serif;
-        --nav-h: 72px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 24px); }
-    body { font-family: var(--sans); font-size: 17px; background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.8; }
-
-    .label { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); }
-    .label::before { content: ''; display: block; width: 18px; height: 1px; background: var(--teal); flex-shrink: 0; }
-
-    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; text-decoration: none; white-space: nowrap; }
-    .btn-solid { background: var(--teal); color: var(--white); padding: 14px 28px; }
-    .btn-solid:hover { background: var(--teal-dark); }
-    .btn-ghost { color: var(--teal); border-bottom: 1px solid var(--teal); padding-bottom: 3px; }
-    .btn-ghost:hover { gap: 14px; }
-    .btn-outline-white { color: var(--ink); border: 1px solid var(--line); padding: 14px 28px; }
-    .btn-outline-white:hover { border-color: var(--teal); color: var(--teal); }
-    .btn-cta-accent { background: var(--teal); color: var(--white); padding: 14px 32px; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
-    .btn-cta-accent:hover { background: var(--teal-dark); }
-
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
-    .reveal.in { opacity: 1; transform: none; }
-    .rv1 { transition-delay: 0.08s; }
-    .rv2 { transition-delay: 0.16s; }
-    .rv3 { transition-delay: 0.24s; }
-
-    h2.sh { font-family: var(--serif); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; margin-top: 8px; color: var(--ink); }
-    .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; flex-wrap: wrap; gap: 16px; }
-    svg { display: block; }
-    img { max-width: 100%; height: auto; }
-
-    /* NAV */
-    #nav { position: fixed; top: 0; inset-x: 0; z-index: 60; background: rgba(255,255,255,0.98); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); transition: box-shadow 0.3s; }
-    #nav.scrolled { box-shadow: 0 1px 16px rgba(0,0,0,0.05); }
-    .nav-inner { max-width: 1340px; margin: 0 auto; padding: 0 40px; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; position: relative; }
-    .nav-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; flex-shrink: 0; line-height: 1; letter-spacing: -0.01em; }
-    .nav-logo span { color: var(--teal); }
-    #nav-items { display: flex; list-style: none; gap: 40px; margin-left: auto; padding-right: 40px; padding-left: 80px; align-items: center; }
-    .menu-item > a { font-size: 14px; font-weight: 500; letter-spacing: 0.01em; color: var(--ink-soft); text-decoration: none; position: relative; padding-bottom: 4px; transition: color 0.15s; display: block; border-bottom: 2px solid transparent; }
-    .menu-item > a:hover, .menu-item.active > a { color: var(--teal); border-bottom-color: var(--teal); }
-    .menu-item > a::after { display: none; }
-    #dropdown { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0,0,0,0.06); display: none; justify-content: center; z-index: 50; }
-    #dropdown.show { display: flex; }
-    #dropdown-content { max-width: 1340px; width: 100%; padding: 36px 40px; display: flex; gap: 56px; }
-    .drop-col { flex: 1; }
-    .drop-col h4 { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 16px; }
-    .drop-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .drop-col ul li a { font-size: 14px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; display: inline-block; }
-    .drop-col ul li a:hover { color: var(--teal); }
-    .nav-right { display: flex; align-items: center; gap: 16px; }
-    #nav-cta { display: none; }
-    #ham { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; color: var(--ink); }
-    .bar { display: block; width: 22px; height: 1.5px; background: currentColor; border-radius: 1px; transition: all 0.3s ease; transform-origin: center; }
-    #ham.open .bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    #ham.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    #ham.open .bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    @media (max-width: 1020px) { #nav-items { display: none; } #ham { display: flex; } .nav-inner { padding: 0 24px; } #nav-cta { display: none !important; } }
-
-    /* MOBILE MENU */
-    #mobile-menu { position: fixed; inset: 0; z-index: 80; background: var(--white); opacity: 0; visibility: hidden; transform: scale(0.97); transition: opacity 0.28s ease, transform 0.28s ease, visibility 0s linear 0.28s; display: flex; flex-direction: column; overflow: hidden; }
-    #mobile-menu.open { transform: scale(1); opacity: 1; visibility: visible; transition: opacity 0.28s ease, transform 0.28s ease, visibility 0s linear 0s; }
-    .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: var(--nav-h); border-bottom: 1px solid var(--line); flex-shrink: 0; }
-    .mob-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-    .mob-logo span { color: var(--teal); }
-    #mob-close { background: none; border: none; cursor: pointer; color: var(--ink-soft); padding: 8px; display: flex; align-items: center; justify-content: center; transition: color 0.15s; }
-    #mob-close:hover { color: var(--ink); }
-    .mob-nav { padding: 0 24px; flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-    #mobile-nav-items { list-style: none; display: flex; flex-direction: column; }
-    .mob-row { display: flex; align-items: center; border-bottom: 1px solid var(--line); }
-    #mobile-nav-items > li:first-child .mob-row { border-top: 1px solid var(--line); }
-    .mob-main-link { flex: 1; display: flex; align-items: center; gap: 14px; padding: 18px 0; text-decoration: none; }
-    .mob-main-left { display: flex; align-items: center; gap: 14px; }
-    .mob-num { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; color: var(--teal); font-family: var(--serif); min-width: 20px; }
-    .mob-main-label { font-family: var(--serif); font-size: 21px; font-weight: 400; color: var(--ink); letter-spacing: -0.01em; line-height: 1; }
-    .mob-main-link:hover .mob-main-label, .mob-main-link.active .mob-main-label { color: var(--teal); }
-    .mob-toggle { background: none; border: none; cursor: pointer; padding: 18px 0 18px 16px; color: var(--ink-soft); flex-shrink: 0; display: flex; align-items: center; transition: color 0.15s; }
-    .mob-toggle:hover, .mob-toggle.open { color: var(--teal); }
-    .mob-toggle svg { transition: transform 0.25s ease; }
-    .mob-toggle.open svg { transform: rotate(180deg); }
-    .mob-sub-list { list-style: none; padding: 4px 0 14px; display: none; }
-    .mob-sub-list.open { display: block; }
-    .mob-sub-list li a { display: flex; align-items: center; gap: 10px; padding: 9px 0 9px 34px; font-size: 14px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
-    .mob-sub-list li a:hover { color: var(--teal); }
-    .mob-bottom { padding: 20px 24px; border-top: 1px solid var(--line); flex-shrink: 0; }
-    .mob-bottom .btn-cta-accent { width: 100%; justify-content: center; font-size: 14px; padding: 15px 28px; }
-    .mob-legal { display: flex; gap: 20px; margin-top: 14px; }
-    .mob-legal a { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
-    .mob-legal a:hover { color: var(--teal); }
-
-    /* PAGE HERO */
-    .page-hero { padding-top: var(--nav-h); background: var(--white); border-bottom: 1px solid var(--line); }
-    .page-hero-inner { max-width: 1340px; margin: 0 auto; padding: 72px 40px 64px; }
-    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 24px; }
-    .breadcrumb a { color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
-    .breadcrumb a:hover { color: var(--teal); }
-    .breadcrumb .bc-sep { color: var(--line); }
-    .breadcrumb .bc-active { color: var(--teal); }
-    .page-hero-h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin: 14px 0 20px; }
-    .page-hero-h1 em { font-style: italic; color: var(--teal); }
-    .page-hero-sub { font-size: 17px; line-height: 1.8; color: var(--ink-soft); max-width: 60ch; margin-bottom: 36px; }
-
-    /* CONTENT SECTIONS */
-    .srv-section { border-top: 1px solid var(--line); }
-    .srv-section.alt { background: var(--mist); }
-    .srv-section-inner { max-width: 1340px; margin: 0 auto; padding: 76px 40px; }
-    .services-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-    .services-prose { display: flex; flex-direction: column; gap: 20px; padding-top: 4px; }
-    .services-prose p { font-size: 16px; line-height: 1.85; color: var(--ink-soft); max-width: 64ch; }
-    .services-prose .link-row { margin-top: 8px; }
-
-    /* FERTIGUNG */
-    #fertigung { border-top: 1px solid var(--line); background: var(--mist); }
-    .fert-inner { max-width: 1340px; margin: 0 auto; padding: 76px 40px; }
-    .fert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 44px; }
-    .fert-card { background: var(--white); padding: 28px 22px; }
-    .fert-card h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
-    .fert-card p { font-size: 14px; line-height: 1.7; color: var(--ink-soft); }
-
-    /* MATERIALIEN */
-    #materialien { border-top: 1px solid var(--line); }
-    .materials-inner { max-width: 1340px; margin: 0 auto; padding: 76px 40px; }
-    .mat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 44px; }
-    .mat-card { background: var(--white); padding: 28px 24px; transition: background 0.2s; }
-    .mat-card:hover { background: var(--teal-glow); }
-    .mat-card h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-    .mat-card p { font-size: 14px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 14px; }
-    .mat-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .mat-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); background: var(--teal-glow); padding: 3px 8px; }
-
-    /* ZERTIFIZIERUNG */
-    #zertifizierung { border-top: 1px solid rgba(13,148,136,0.12); border-bottom: 1px solid rgba(13,148,136,0.12); background: var(--teal-bg); }
-    .cert-inner { max-width: 1340px; margin: 0 auto; padding: 76px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .cert-h { font-family: var(--serif); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; color: var(--ink); line-height: 1.2; letter-spacing: -0.01em; margin: 10px 0 16px; }
-    .cert-h em { font-style: italic; color: var(--teal); }
-    .cert-p { font-size: 16px; line-height: 1.8; color: var(--ink-soft); margin-bottom: 28px; }
-    .cert-facts { display: flex; flex-direction: column; gap: 20px; padding-top: 4px; }
-    .cert-fact { border-left: 2px solid var(--teal); padding-left: 16px; }
-    .cert-fact strong { display: block; font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-    .cert-fact span { font-size: 14px; color: var(--ink-soft); line-height: 1.65; display: block; }
-
-    /* FAQ */
-    #faq { border-top: 1px solid var(--line); }
-    .faq-inner { max-width: 1340px; margin: 0 auto; padding: 76px 40px; display: grid; grid-template-columns: 280px 1fr; gap: 72px; }
-    .faq-aside h2 { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; margin-top: 10px; }
-    .faq-aside p { font-size: 15px; line-height: 1.75; color: var(--ink-soft); margin: 14px 0 24px; }
-    .faq-list { display: flex; flex-direction: column; border: 1px solid var(--line); }
-    .faq-item { border-bottom: 1px solid var(--line); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--ink); text-align: left; gap: 16px; transition: background 0.15s; }
-    .faq-q:hover { background: var(--teal-glow); }
-    .faq-chevron { width: 16px; height: 16px; color: var(--teal); flex-shrink: 0; transition: transform 0.3s ease; }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.16,1,0.3,1); }
-    .faq-item.open .faq-a { max-height: 400px; }
-    .faq-a p { padding: 0 24px 22px; font-size: 14px; line-height: 1.75; color: var(--ink-soft); }
-
-    /* CTA */
-    #cta { background: var(--teal-bg); border-top: 1px solid rgba(13,148,136,0.12); }
-    .cta-inner { max-width: 1340px; margin: 0 auto; padding: 96px 40px; }
-    .cta-h { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin: 14px 0 20px; }
-    .cta-h em { font-style: italic; color: var(--teal); }
-    .cta-sub { font-size: 17px; line-height: 1.8; color: var(--ink-soft); max-width: 52ch; margin-bottom: 40px; }
-    .cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    /* FOOTER */
-    #footer { background: var(--footer-bg); border-top: 1px solid var(--line); }
-    .footer-inner { max-width: 1340px; margin: 0 auto; padding: 48px 40px 32px; }
-    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 24px; flex-wrap: wrap; }
-    .footer-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; display: block; }
-    .footer-logo span { color: var(--teal); }
-    .footer-tagline { font-size: 13px; color: var(--ink-soft); margin-top: 5px; }
-    .footer-cols { display: flex; gap: 48px; flex-wrap: wrap; }
-    .footer-col h5 { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 12px; }
-    .footer-col p { font-size: 15px; color: var(--ink-soft); line-height: 1.65; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .footer-copy { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.1em; text-transform: uppercase; }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--teal); }
-
-    /* RESPONSIVE */
-    @media (max-width: 1020px) {
-        .page-hero-inner { padding: 52px 24px 48px; }
-        .srv-section-inner, .fert-inner, .materials-inner { padding: 52px 24px; }
-        .cert-inner { grid-template-columns: 1fr; gap: 44px; padding: 52px 24px; }
-        .faq-inner { grid-template-columns: 1fr; gap: 36px; padding: 52px 24px; }
-        .services-layout { grid-template-columns: 1fr; gap: 32px; }
-        .fert-grid { grid-template-columns: repeat(2, 1fr); }
-        .mat-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px) {
-        .fert-grid { grid-template-columns: 1fr; }
-        .mat-grid { grid-template-columns: 1fr; }
-        .cta-inner { padding: 68px 24px; }
-        .footer-inner { padding: 40px 24px 28px; }
-        .cta-actions { flex-direction: column; align-items: stretch; }
-        .cta-actions .btn { justify-content: center; }
-    }
-    @media (max-width: 480px) {
-        .page-hero-inner { padding: 44px 20px 40px; }
-    }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leistungen – Metallbau Meyer, Eberswalde</title>
+<meta name="description" content="Geländer, Treppen, Tore, Balkone, Fenster, Vordächer und Stahlbau: die Leistungen von Metallbau Meyer in Eberswalde.">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://metallbau-meyer-eberswalde.de/leistungen.html">
+<meta property="og:title" content="Leistungen – Metallbau Meyer, Eberswalde">
+<meta property="og:description" content="Geländer, Treppen, Tore, Balkone, Fenster, Vordächer und Stahlbau: die Leistungen von Metallbau Meyer in Eberswalde.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f766e'/%3E%3Cpath d='M8 24V8h4l4 7 4-7h4v16h-3.5V14l-4.5 7h-1L11.5 14v10z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<!-- NAV -->
-<nav id="nav" aria-label="Hauptnavigation">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo" aria-label="Metallbau Meyer – Startseite">Daniel Meyer<span>.</span></a>
-        <ul id="nav-items" role="menubar">
-            <li class="menu-item active" data-key="Leistungen" role="none"><a href="leistungen.html" role="menuitem">Leistungen</a></li>
-            <li class="menu-item" data-key="Lösungen" role="none"><a href="loesungen.html" role="menuitem">Lösungen</a></li>
-            <li class="menu-item" data-key="Unternehmen" role="none"><a href="unternehmen.html" role="menuitem">Unternehmen</a></li>
-            <li class="menu-item" data-key="Kontakt" role="none"><a href="kontakt.html" role="menuitem">Kontakt</a></li>
-        </ul>
-        <div id="dropdown" role="region" aria-label="Untermenü">
-            <div id="dropdown-content"></div>
-        </div>
-        <div class="nav-right">
-            <a href="anfrage.html" class="btn btn-solid" id="nav-cta">Projekt anfragen</a>
-            <button id="ham" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </div>
-    </div>
-</nav>
-
-<div id="mobile-menu" role="dialog" aria-label="Mobile Navigation" aria-modal="true">
-    <div class="mob-header">
-        <a href="index.html" class="mob-logo">Daniel Meyer<span>.</span></a>
-        <button id="mob-close" aria-label="Menü schließen">
-            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-    </div>
-    <div class="mob-nav">
-        <ul id="mobile-nav-items"></ul>
-    </div>
-    <div class="mob-bottom">
-        <a href="anfrage.html" class="btn btn-cta-accent">
-            Projekt anfragen
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <div class="mob-legal">
-            <a href="impressum.html">Impressum</a>
-            <a href="datenschutz.html">Datenschutz</a>
-        </div>
-    </div>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero" aria-labelledby="page-h1">
-    <div class="page-hero-inner">
-        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
-            <a href="index.html">Startseite</a>
-            <span class="bc-sep">›</span>
-            <span class="bc-active">Leistungen</span>
+<body class="has-sticky">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="wrap bar">
+        <a class="logo" href="index.html" aria-label="Metallbau Meyer – Startseite">Metallbau <span>Meyer</span></a>
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links"><span>Menü</span></button>
+        <nav aria-label="Hauptnavigation">
+            <ul class="nav-links" id="nav-links">
+                <li class="has-menu"><a href="leistungen.html" aria-current="page">Leistungen</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Privat</p><ul><li><a href="leistungen.html#gelaender">Geländer &amp; Treppen</a></li><li><a href="leistungen.html#tor-zaun">Tore &amp; Zäune</a></li><li><a href="leistungen.html#balkon">Anbaubalkone</a></li><li><a href="leistungen.html#fenster">Fenster &amp; Türen</a></li><li><a href="leistungen.html#vordach-carport">Vordächer &amp; Carports</a></li></ul></div><div class="mega-col"><p class="mega-title">Gewerbe</p><ul><li><a href="leistungen.html#gewerbe">Stahlkonstruktionen</a></li><li><a href="leistungen.html#gewerbe">Treppen &amp; Podeste</a></li><li><a href="leistungen.html#gewerbe">Rammschutz</a></li><li><a href="leistungen.html#gewerbe">Hallentore</a></li></ul></div><div class="mega-col"><p class="mega-title">Fertigung</p><ul><li><a href="leistungen.html#fertigung">Laserschneiden</a></li><li><a href="leistungen.html#fertigung">Abkanten &amp; Biegen</a></li><li><a href="leistungen.html#fertigung">Schweißen</a></li><li><a href="leistungen.html#fertigung">Werkstoffe</a></li></ul></div></div></div></li>
+                <li class="has-menu"><a href="loesungen.html">Lösungen</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Bereiche</p><ul><li><a href="loesungen.html#privat">Privatbau</a></li><li><a href="loesungen.html#gewerbe">Gewerbebau</a></li><li><a href="loesungen.html#sonderbau">Sonderanfertigung</a></li></ul></div><div class="mega-col"><p class="mega-title">Zusätzlich</p><ul><li><a href="loesungen.html#zusaetzlich">Zufahrtskontrolle</a></li><li><a href="loesungen.html#zusaetzlich">Brandschutz</a></li><li><a href="loesungen.html#zusaetzlich">Carports für Photovoltaik</a></li><li><a href="loesungen.html#zusaetzlich">Reparatur &amp; Service</a></li></ul></div></div></div></li>
+                <li class="has-menu"><a href="unternehmen.html">Unternehmen</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Profil</p><ul><li><a href="unternehmen.html#team">Daniel Meyer</a></li><li><a href="unternehmen.html#prinzip">Wie wir arbeiten</a></li><li><a href="unternehmen.html#zertifikate">Qualifikationen</a></li></ul></div></div></div></li>
+                <li class="has-menu"><a href="kontakt.html">Kontakt</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Erreichbarkeit</p><ul><li><a href="kontakt.html">Telefon &amp; E-Mail</a></li><li><a href="kontakt.html#oeffnungszeiten">Öffnungszeiten</a></li></ul></div><div class="mega-col"><p class="mega-title">Direkt</p><ul><li><a href="anfrage.html">Projekt anfragen</a></li></ul></div></div></div></li>
+                <li><a class="btn btn-primary" href="anfrage.html">Projekt anfragen</a></li>
+            </ul>
         </nav>
-        <div class="label reveal">Meisterbetrieb · Eberswalde · seit 1988</div>
-        <h1 class="page-hero-h1 reveal rv1" id="page-h1">Metallbau-Leistungen<br>aus <em>einer Hand.</em></h1>
-        <p class="page-hero-sub reveal rv2">
-            Von der ersten Skizze bis zur montierten Konstruktion – Planung, Fertigung und Montage aus unserer Werkstatt in Eberswalde. Kein Subunternehmer, keine Überraschungen auf der Rechnung.
-        </p>
-        <div class="reveal rv3">
-            <a href="anfrage.html" class="btn btn-cta-accent">
-                Kostenloses Angebot anfragen
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+    </div>
+</header>
+<main id="main">
+<section class="page-head">
+    <div class="wrap">
+        <h1>Leistungen</h1>
+        <p class="lead">Wählen Sie Ihren Bereich – oder beschreiben Sie uns einfach Ihr Projekt.</p>
+        <nav class="chips" aria-label="Auf dieser Seite">
+            <a class="chip" href="#privat">Für Haus &amp; Grundstück</a>
+            <a class="chip" href="#gewerbe">Für Gewerbe</a>
+            <a class="chip" href="#fertigung">Fertigung &amp; Werkstoffe</a>
+        </nav>
+    </div>
+</section>
+
+<section class="section" id="privat" aria-labelledby="h-privat">
+    <div class="wrap">
+        <div class="section-head"><h2 id="h-privat">Für Haus &amp; Grundstück</h2></div>
+        <div class="cards">
+            <article class="card" id="gelaender">
+            <img src="img/treppengelaender.jpg" alt="Treppengeländer aus Metall" width="1000" height="667" loading="lazy">
+            <div class="card-body"><h3>Geländer &amp; Treppen</h3><p>Innen und außen, aus Stahl, Edelstahl oder Schmiedeeisen.</p><a class="link-arrow" href="anfrage.html?art=gelaender">Anfragen</a></div>
+        </article>
+            <article class="card" id="tor-zaun">
+            <img src="img/tor.jpg" alt="Einfahrtstor mit Antrieb" width="1000" height="667" loading="lazy">
+            <div class="card-body"><h3>Tore &amp; Zäune</h3><p>Schiebe- und Drehtore, auf Wunsch mit Elektroantrieb.</p><a class="link-arrow" href="anfrage.html?art=tor-zaun">Anfragen</a></div>
+        </article>
+            <article class="card" id="balkon">
+            <img src="img/balkon.jpg" alt="Anbaubalkon aus Edelstahl" width="1000" height="667" loading="lazy">
+            <div class="card-body"><h3>Anbaubalkone</h3><p>Freitragend oder mit Stützen, für Bestandsgebäude.</p><a class="link-arrow" href="anfrage.html?art=balkon">Anfragen</a></div>
+        </article>
+            <article class="card" id="fenster">
+            <img src="img/fenster.jpg" alt="Fenster mit dunklen Rahmen" width="1000" height="667" loading="lazy">
+            <div class="card-body"><h3>Fenster &amp; Türen</h3><p>Aluminiumfenster und -türen nach Maß.</p><a class="link-arrow" href="anfrage.html?art=fenster">Anfragen</a></div>
+        </article>
+            <article class="card" id="vordach-carport">
+            <img src="img/vordach.jpg" alt="Glasvordach am Eingang" width="1000" height="667" loading="lazy">
+            <div class="card-body"><h3>Vordächer &amp; Carports</h3><p>Glasvordächer, Carports und Überdachungen.</p><a class="link-arrow" href="anfrage.html?art=vordach-carport">Anfragen</a></div>
+        </article>
+            <div class="card card-more">
+                <h3>Etwas anderes?</h3>
+                <p>Reparaturen, Sonderwünsche – schildern Sie uns Ihr Vorhaben.</p>
+                <a class="link-arrow" href="anfrage.html">Projekt anfragen</a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- PRIVATBAU -->
-<section id="privatbau" class="srv-section" aria-labelledby="privatbau-heading">
-    <div class="srv-section-inner">
-        <div class="services-layout">
-            <div class="reveal">
-                <div class="label">Leistungen für Privatpersonen</div>
-                <h2 class="sh" id="privatbau-heading">Metallbau für Ihr Zuhause</h2>
-                <div style="margin-top: 24px;">
-                    <a href="anfrage.html" class="btn btn-ghost">
-                        Kostenloses Angebot
-                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="services-prose reveal rv1">
-                <p>Im Privatbau begleiten wir Bauherren und Hausbesitzer von der ersten Idee bis zur montierten Konstruktion. Ob Treppengeländer aus Edelstahl, ein maßgefertigtes Einfahrtstor mit Elektroantrieb, eine freitragende Außentreppe oder ein Anbaubalkon für Ihr Bestandsgebäude – wir fertigen alles in unserer Werkstatt in Eberswalde, ohne Fremdvergabe und mit vollständigem Statiknachweis.</p>
-                <p>Zum Leistungsumfang gehören Geländer und Brüstungen, Vordächer und Überdachungen, Garagentore, Stahl- und Aluminiumfenster, Einbruchschutzgitter sowie Carports. Für jeden Auftrag kommen wir zum kostenlosen Aufmaß, erstellen eine CAD-Zeichnung und liefern ein vollständiges Festpreisangebot – in der Regel innerhalb von 48 Stunden, ohne versteckte Positionen.</p>
-            </div>
+<section class="section alt" id="gewerbe" aria-labelledby="h-gew">
+    <div class="wrap split">
+        <div>
+            <h2 id="h-gew">Für Gewerbe &amp; Industrie</h2>
+            <p>Tragende Stahlbauteile fertigen wir nach DIN EN 1090 (EXC2), mit CE-Kennzeichnung und Dokumentation.</p>
+            <ul class="rows" style="margin-top:24px">
+                <li><div><h3>Stahlkonstruktionen &amp; Bühnen</h3><p>Stützen, Träger, Wartungsbühnen.</p></div><a class="link-arrow" href="anfrage.html?art=stahlbau">Anfragen</a></li>
+                <li><div><h3>Treppen &amp; Podeste</h3><p>Außen- und Wartungstreppen.</p></div><a class="link-arrow" href="anfrage.html?art=stahlbau">Anfragen</a></li>
+                <li><div><h3>Rammschutz &amp; Absperrungen</h3><p>Für Lager, Logistik und Hallen.</p></div><a class="link-arrow" href="anfrage.html?art=stahlbau">Anfragen</a></li>
+                <li><div><h3>Hallentore &amp; Sonderbauteile</h3><p>Auch nach Kundenzeichnung.</p></div><a class="link-arrow" href="anfrage.html?art=stahlbau">Anfragen</a></li>
+            </ul>
+        </div>
+        <div class="split-media"><img src="img/treppe-gewerbe.jpg" alt="Außentreppe aus Stahl an einer Gebäudewand" width="1000" height="703" loading="lazy"></div>
+    </div>
+</section>
+
+<section class="section" id="fertigung" aria-labelledby="h-fert">
+    <div class="wrap">
+        <div class="section-head"><h2 id="h-fert">Fertigung &amp; Werkstoffe</h2></div>
+        <div class="acc">
+            <details>
+                <summary>Fertigung in der eigenen Werkstatt</summary>
+                <div class="acc-body"><dl>
+                    <dt>Laserschneiden</dt><dd>Konturschnitte in Stahl, Edelstahl und Aluminium.</dd>
+                    <dt>Abkanten &amp; Biegen</dt><dd>Präzise Kantteile nach Zeichnung.</dd>
+                    <dt>Schweißen</dt><dd>WIG und MIG/MAG durch geprüfte Schweißer (EN ISO 9606).</dd>
+                    <dt>Oberflächen</dt><dd>Verzinken, Pulverbeschichten, Edelstahl schleifen und bürsten.</dd>
+                </dl></div>
+            </details>
+            <details>
+                <summary>Werkstoffe</summary>
+                <div class="acc-body"><dl>
+                    <dt>Baustahl</dt><dd>Der Standard für Tore, Treppen, Balkone und Konstruktionen.</dd>
+                    <dt>Edelstahl V2A / V4A</dt><dd>Korrosionsbeständig, ideal für Geländer und Balkone.</dd>
+                    <dt>Aluminium</dt><dd>Leicht und witterungsbeständig, z. B. für Fenster und Türen.</dd>
+                    <dt>Schmiedeeisen</dt><dd>Für klassische, ornamentale Gestaltung.</dd>
+                    <dt>Sicherheitsglas</dt><dd>VSG/ESG für Geländerfüllungen und Vordächer.</dd>
+                </dl></div>
+            </details>
         </div>
     </div>
 </section>
 
-<!-- GEWERBEBAU -->
-<section id="gewerbebau" class="srv-section alt" aria-labelledby="gewerbebau-heading">
-    <div class="srv-section-inner">
-        <div class="services-layout">
-            <div class="reveal">
-                <div class="label">Gewerbe &amp; Industrie</div>
-                <h2 class="sh" id="gewerbebau-heading">Stahlbaulösungen für gewerbliche Anforderungen</h2>
-            </div>
-            <div class="services-prose reveal rv1">
-                <p>Für Gewerbe und Industrie realisieren wir tragende Stahlkonstruktionen nach DIN EN 1090 EXC2 – von einzelnen Stützen und Trägern bis zu kompletten Hallenbühnen, Wartungsplattformen und Außentreppen. Alle unsere Schweißer sind zertifiziert nach EN ISO 9606; jedes Bauteil erhält eine lückenlose CE-Dokumentation mit Materialzertifikaten und Schweißprotokollen.</p>
-                <p>Darüber hinaus liefern wir Rammschutz- und Sicherungssysteme für Lager und Logistik, Hallentore von Hörmann und EFAFLEX sowie Sonderbauteile nach Kundenzeichnung – auch in Kleinserien. Die Fertigung erfolgt ausschließlich in unserer Werkstatt, keine Fremdvergabe, klare Verantwortung.</p>
-            </div>
-        </div>
+<section class="cta-band">
+    <div class="wrap">
+        <h2>Haben Sie ein Projekt?</h2>
+        <p>Beschreiben Sie kurz, was Sie vorhaben. Wir melden uns bei Ihnen.</p>
+        <div class="btn-row"><a class="btn btn-primary" href="anfrage.html">Projekt anfragen</a></div>
     </div>
 </section>
-
-<!-- FERTIGUNG -->
-<section id="fertigung" aria-labelledby="fertigung-heading">
-    <div class="fert-inner">
-        <div class="section-head reveal">
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="foot">
             <div>
-                <div class="label">Werkstatt &amp; Technik</div>
-                <h2 class="sh" id="fertigung-heading">Präzision beginnt in der Fertigung</h2>
+                <strong>Metallbau Meyer</strong>
+                <p>Meisterbetrieb für Metallbau &amp; Stahlbau<br>Eberswalde, Brandenburg · seit 1988</p>
             </div>
+            <ul aria-label="Footer-Navigation">
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="loesungen.html">Lösungen</a></li>
+                <li><a href="unternehmen.html">Unternehmen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
         </div>
-        <div class="fert-grid reveal rv1">
-            <div class="fert-card">
-                <h3>CNC-Laserschneiden</h3>
-                <p>Konturschnitte in Stahl, Edelstahl und Aluminium bis 20 mm Materialstärke – gratfrei und maßhaltig.</p>
-            </div>
-            <div class="fert-card">
-                <h3>CNC-Abkanten &amp; Biegen</h3>
-                <p>Präzises Biegen auf Abkantpresse bis 3000 mm Länge, reproduzierbar auf ±0,1 mm.</p>
-            </div>
-            <div class="fert-card">
-                <h3>Schweißen WIG &amp; MIG/MAG</h3>
-                <p>Geprüfte Schweißer nach EN ISO 9606 für alle gängigen Werkstoffe – keine Fremdvergabe von Schweißarbeiten.</p>
-            </div>
-            <div class="fert-card">
-                <h3>Oberflächenbehandlung</h3>
-                <p>Feuerverzinkung, Pulverbeschichtung in allen RAL-Farben, Grundierung sowie Edelstahlpolitur und Bürstung.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- MATERIALIEN -->
-<section id="materialien" aria-labelledby="materialien-heading">
-    <div class="materials-inner">
-        <div class="section-head reveal">
-            <div>
-                <div class="label">Werkstoffe &amp; Oberflächen</div>
-                <h2 class="sh" id="materialien-heading">Das richtige Material für jede Anforderung</h2>
-            </div>
-        </div>
-        <div class="mat-grid reveal rv1">
-            <div class="mat-card">
-                <h3>Baustahl S235 / S355</h3>
-                <p>Der Universalwerkstoff im Metallbau. Wirtschaftlich, gut zu schweißen und in jede Form zu bringen – für Tore, Treppen, Balkone und Konstruktionen im Innen- und Außenbereich.</p>
-                <div class="mat-tags">
-                    <span class="mat-tag">Feuerverzinkbar</span>
-                    <span class="mat-tag">Pulverbeschichtbar</span>
-                    <span class="mat-tag">Wirtschaftlich</span>
-                </div>
-            </div>
-            <div class="mat-card">
-                <h3>Edelstahl V2A / V4A</h3>
-                <p>Korrosionsbeständig, wartungsfrei und zeitlos elegant. Ideal für Geländer, Handläufe und Balkone – innen wie außen. V4A für erhöhte Chloridbelastung.</p>
-                <div class="mat-tags">
-                    <span class="mat-tag">Korrosionsfest</span>
-                    <span class="mat-tag">Poliert / Gebürstet</span>
-                    <span class="mat-tag">Wartungsfrei</span>
-                </div>
-            </div>
-            <div class="mat-card">
-                <h3>Aluminium EN AW-6060</h3>
-                <p>Leicht, wärmedämmfähig und dauerhaft stabil. Unverzichtbar für Fensterrahmen, Haustüren und Fassadenelemente. Eloxierbar oder pulverbeschichtet in jeder RAL-Farbe.</p>
-                <div class="mat-tags">
-                    <span class="mat-tag">Leichtgewicht</span>
-                    <span class="mat-tag">Wärmedämmend</span>
-                    <span class="mat-tag">Recyclebar</span>
-                </div>
-            </div>
-            <div class="mat-card">
-                <h3>Schmiedeeisen &amp; Flachstahl</h3>
-                <p>Für klassische und ornamentale Designs: Treppengeländer, Fenstergitter und Zaun-Elemente mit traditionellem Charakter – von Hand gefertigt und individuell gestaltet.</p>
-                <div class="mat-tags">
-                    <span class="mat-tag">Individuell</span>
-                    <span class="mat-tag">Ornamental</span>
-                    <span class="mat-tag">Langlebig</span>
-                </div>
-            </div>
-            <div class="mat-card">
-                <h3>Feuerverzinkung</h3>
-                <p>Der effektivste Langzeitschutz für Stahl im Außenbereich: 50–80 µm Zinkschicht, galvanisch schützend, auch an Schnittkanten. Anschließend pulverbeschichtbar in Wunschfarbe.</p>
-                <div class="mat-tags">
-                    <span class="mat-tag">C3/C4 Klasse</span>
-                    <span class="mat-tag">25+ Jahre Schutz</span>
-                </div>
-            </div>
-            <div class="mat-card">
-                <h3>VSG &amp; ESG-Sicherheitsglas</h3>
-                <p>Verbundsicherheitsglas für Glasgeländer, Vordächer und Glasfüllungen. Bei Bruch hält die Folie die Scheibe zusammen – sicher und baurechtlich zugelassen.</p>
-                <div class="mat-tags">
-                    <span class="mat-tag">DIN EN 14449</span>
-                    <span class="mat-tag">Splittersicher</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ZERTIFIZIERUNG -->
-<section id="zertifizierung" aria-labelledby="cert-heading">
-    <div class="cert-inner">
-        <div class="reveal">
-            <div class="label">Qualitätssicherung</div>
-            <h2 class="cert-h" id="cert-heading">DIN EN 1090 EXC2 –<br><em>geprüfte Qualität im Stahlbau</em></h2>
-            <p class="cert-p">
-                Unsere Zertifizierung nach DIN EN 1090 Ausführungsklasse EXC2 ist kein Marketingversprechen – sie ist eine amtlich geprüfte und dokumentierte Qualitätssicherung, die für CE-kennzeichnungspflichtige Tragswerke gesetzlich vorgeschrieben ist.
-            </p>
-            <a href="anfrage.html" class="btn btn-solid">Zertifizierte Leistung anfragen</a>
-        </div>
-        <div class="cert-facts reveal rv1">
-            <div class="cert-fact">
-                <strong>CE-Kennzeichnung für alle tragenden Bauteile</strong>
-                <span>Jedes tragende Stahlteil erhält eine Leistungserklärung und CE-Zeichen – ein rechtliches Muss für Baugenehmigungen und Versicherungen.</span>
-            </div>
-            <div class="cert-fact">
-                <strong>Geprüfte Schweißer nach EN ISO 9606</strong>
-                <span>Unsere Schweißer sind zertifiziert und werden regelmäßig nachgeprüft. Keine Fremdvergabe von Schweißarbeiten.</span>
-            </div>
-            <div class="cert-fact">
-                <strong>Lückenlose Dokumentation &amp; Rückverfolgbarkeit</strong>
-                <span>Materialzertifikate, Schweißprotokolle und Abnahmedokumentation – von der Stange bis zum montierten Bauteil nachvollziehbar.</span>
-            </div>
-            <div class="cert-fact">
-                <strong>Anerkannt von Baubehörden &amp; Versicherungen</strong>
-                <span>Finanzierungen und Versicherungen setzen die CE-Kennzeichnung voraus. Mit uns sind Sie auf der sicheren Seite.</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" aria-labelledby="faq-heading">
-    <div class="faq-inner">
-        <div class="faq-aside reveal">
-            <div class="label">Häufige Fragen</div>
-            <h2 id="faq-heading">Fragen zu unseren Leistungen</h2>
-            <p>Weitere Fragen? Rufen Sie uns an oder nutzen Sie unser Anfrageformular – wir antworten innerhalb von 24 Stunden.</p>
-            <a href="anfrage.html" class="btn btn-solid">Frage stellen</a>
-        </div>
-        <div class="reveal rv1">
-            <div class="faq-list" role="list">
-
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false">
-                        <span>Wie lange dauert die Fertigung nach Auftragserteilung?</span>
-                        <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p>Die Fertigungszeit hängt von Komplexität und aktueller Auslastung ab. Für einfache Geländer oder Tore rechnen Sie mit 2–4 Wochen, für Treppen und komplexe Konstruktionen mit 4–8 Wochen. Wir nennen Ihnen beim Angebot einen verbindlichen Fertigstellungstermin – und halten ihn.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false">
-                        <span>Fahren Sie auch zu Kunden außerhalb von Eberswalde?</span>
-                        <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p>Ja. Wir sind im gesamten Barnim, der Uckermark und der Region Berlin-Brandenburg tätig. Aufmaß- und Montagetermine koordinieren wir effizient. Ab einer bestimmten Entfernung kalkulieren wir Fahrtkosten transparent im Angebot.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false">
-                        <span>Was bedeutet DIN EN 1090 EXC2 konkret für meinen Auftrag?</span>
-                        <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p>Für tragende Stahlbauteile, die in Gebäude eingebaut werden, schreibt die EU-Bauproduktenverordnung die CE-Kennzeichnung vor. Unsere EXC2-Zertifizierung belegt, dass wir dazu berechtigt sind und die Qualitätsanforderungen erfüllen. Für nicht-tragende Bauteile wie einfache Geländer ist dies oft nicht zwingend, wir fertigen aber immer nach diesen Standards.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false">
-                        <span>Bieten Sie Reparaturen an bestehenden Metallbauteilen an?</span>
-                        <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p>Ja. Wir reparieren Tore, Geländer und Treppen auch dann, wenn wir sie nicht selbst gefertigt haben. Schweißreparaturen, Ersatzteilbeschaffung für Torantriebe sowie Korrosionsschutz-Ausbesserungen gehören zu unserem Serviceangebot. Fragen Sie uns direkt – auch per Foto per E-Mail.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false">
-                        <span>Wie erhalte ich ein Angebot – und was kostet das Aufmaß?</span>
-                        <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p>Das Aufmaß und das Erstgespräch sind kostenlos und unverbindlich. Nutzen Sie unser Anfrageformular oder rufen Sie uns direkt an. Nach dem Aufmaß-Termin erhalten Sie innerhalb von 24–48 Stunden ein vollständiges Festpreisangebot – ohne versteckte Positionen. Sie entscheiden dann in Ruhe.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section id="cta" aria-labelledby="cta-heading">
-    <div class="cta-inner">
-        <div class="label reveal">Jetzt unverbindlich anfragen</div>
-        <h2 class="cta-h reveal rv1" id="cta-heading">Haben Sie ein Projekt geplant?<br><em>Sprechen wir darüber.</em></h2>
-        <p class="cta-sub reveal rv2">
-            Schildern Sie uns kurz Ihr Vorhaben – wir melden uns innerhalb von 24 Stunden mit einer ehrlichen Einschätzung und einem vollständigen Angebot. Kostenlos, ohne jede Verpflichtung.
-        </p>
-        <div class="cta-actions reveal rv3">
-            <a href="anfrage.html" class="btn btn-cta-accent">
-                Zum Anfrageformular
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="tel:+49" class="btn btn-outline-white">Direkt anrufen</a>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="footer" aria-label="Seitenfußbereich">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <a href="index.html" class="footer-logo" aria-label="Metallbau Meyer – Startseite">Meyer<span>.</span></a>
-                <p class="footer-tagline">Meisterbetrieb für Metallbau &amp; Stahlbau · Eberswalde seit 1988</p>
-            </div>
-            <div class="footer-cols">
-                <div class="footer-col">
-                    <h5>Werkstatt</h5>
-                    <p>Eberswalde<br>Brandenburg</p>
-                </div>
-                <div class="footer-col">
-                    <h5>Servicegebiet</h5>
-                    <p>Eberswalde &amp; gesamte Region<br>Barnim / Uckermark</p>
-                </div>
-                <div class="footer-col">
-                    <h5>Zertifizierung</h5>
-                    <p>DIN EN 1090<br>EXC2 zertifiziert</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">© 2026 Metallbau Meyer – Alle Rechte vorbehalten</p>
-            <div class="footer-links">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-                <a href="#" aria-label="Metallbau Meyer auf LinkedIn folgen">LinkedIn</a>
-            </div>
-        </div>
+        <p class="copy">© 2026 Metallbau Meyer</p>
     </div>
 </footer>
-
-<script>
-const MENU_CONTENT = {
-    Leistungen: {
-        firstUl:  { title: 'Privat',    items: [['Geländer & Brüstungen','leistungen.html#privatbau'], ['Stahltreppen','leistungen.html#privatbau'], ['Tor- & Zaunanlagen','leistungen.html#privatbau'], ['Anbaubalkone','leistungen.html#privatbau']] },
-        secondUl: { title: 'Gewerbe',   items: [['Stahlkonstruktionen','leistungen.html#gewerbebau'], ['Wartungsbühnen','leistungen.html#gewerbebau'], ['Rammschutz','leistungen.html#gewerbebau'], ['Hallentore','leistungen.html#gewerbebau']] },
-        thirdUl:  { title: 'Fertigung', items: [['Laserschneiden','leistungen.html#fertigung'], ['CNC-Biegen','leistungen.html#fertigung'], ['Schweißarbeiten','leistungen.html#fertigung']] }
-    },
-    Lösungen: {
-        firstUl:  { title: 'Segmente',    items: [['Privatbau','loesungen.html#privat'], ['Gewerbebau','loesungen.html#gewerbe'], ['Industrie','loesungen.html#industrie']] },
-        secondUl: { title: 'Materialien', items: [['Edelstahl','leistungen.html#materialien'], ['Aluminium','leistungen.html#materialien'], ['Baustahl','leistungen.html#materialien']] },
-        thirdUl:  { title: 'Spezial',     items: [['Brandschutz','loesungen.html#spezial'], ['Smart-Access-Systeme','loesungen.html#spezial']] }
-    },
-    Unternehmen: {
-        firstUl:  { title: 'Profil',    items: [['Unsere Geschichte','unternehmen.html#geschichte'], ['Das Team','unternehmen.html#team'], ['Zertifikate','unternehmen.html#zertifikate']] },
-        secondUl: { title: 'Karriere',  items: [['Offene Stellen','#'], ['Ausbildung','#']] },
-        thirdUl:  { title: 'Aktuelles', items: [['Neuigkeiten','#'], ['Downloads','#']] }
-    },
-    Kontakt: {
-        firstUl:  { title: 'Anschrift', items: [['Werkstatt & Büro','kontakt.html'], ['Anfahrt','kontakt.html#anfahrt']] },
-        secondUl: { title: 'Direkt',    items: [['Anfrageformular','anfrage.html'], ['Rückruf vereinbaren','kontakt.html']] },
-        thirdUl:  { title: 'Service',   items: [['Öffnungszeiten','kontakt.html'], ['Reparatur & Notfall','kontakt.html']] }
-    }
-};
-
-/* DESKTOP DROPDOWN */
-const menuItems = document.querySelectorAll('.menu-item');
-const dropdown = document.getElementById('dropdown');
-const dropdownContent = document.getElementById('dropdown-content');
-
-function openDropdown(key) {
-    const content = MENU_CONTENT[key];
-    if (!content) return;
-    menuItems.forEach(item => item.classList.toggle('active', item.dataset.key === key));
-    dropdownContent.innerHTML = '';
-    ['firstUl','secondUl','thirdUl'].forEach(section => {
-        const col = document.createElement('div');
-        col.className = 'drop-col';
-        col.innerHTML = `<h4>${content[section].title}</h4><ul>${content[section].items.map(i => `<li><a href="${Array.isArray(i) ? i[1] : '#'}">${Array.isArray(i) ? i[0] : i}</a></li>`).join('')}</ul>`;
-        dropdownContent.appendChild(col);
-    });
-    dropdown.classList.add('show');
-}
-function closeDropdown() {
-    dropdown.classList.remove('show');
-    menuItems.forEach(item => item.classList.remove('active'));
-    document.querySelector('[data-key="Leistungen"]').classList.add('active');
-}
-menuItems.forEach(item => item.addEventListener('mouseenter', () => openDropdown(item.dataset.key)));
-document.getElementById('nav').addEventListener('mouseleave', closeDropdown);
-
-/* MOBILE MENU */
-const MOB_NAV = [
-    { label: 'Leistungen',  href: 'leistungen.html',  num: '01', sub: [['Privatbau','leistungen.html#privatbau'],['Gewerbebau','leistungen.html#gewerbebau'],['Fertigung','leistungen.html#fertigung'],['Materialien','leistungen.html#materialien']] },
-    { label: 'Lösungen',    href: 'loesungen.html',   num: '02', sub: [['Privatbau','loesungen.html#privat'],['Gewerbebau','loesungen.html#gewerbe'],['Industrie','loesungen.html#industrie']] },
-    { label: 'Unternehmen', href: 'unternehmen.html', num: '03', sub: [['Geschichte','unternehmen.html#geschichte'],['Das Team','unternehmen.html#team'],['Zertifikate','unternehmen.html#zertifikate']] },
-    { label: 'Kontakt',     href: 'kontakt.html',     num: '04', sub: [['Adresse & Anfahrt','kontakt.html#anfahrt'],['Öffnungszeiten','kontakt.html']] },
-];
-const mobileNav = document.getElementById('mobile-nav-items');
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-MOB_NAV.forEach(item => {
-    const li = document.createElement('li');
-    const isActive = item.href === currentPage;
-    let html = `<div class="mob-row"><a href="${item.href}" class="mob-main-link${isActive ? ' active' : ''}"><span class="mob-main-left"><span class="mob-num">${item.num}</span><span class="mob-main-label">${item.label}</span></span></a>`;
-    if (item.sub.length) { html += `<button class="mob-toggle" aria-label="Untermenü ${item.label}" aria-expanded="false"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></button>`; }
-    html += `</div>`;
-    if (item.sub.length) { html += `<ul class="mob-sub-list">${item.sub.map(s => `<li><a href="${s[1]}">${s[0]}</a></li>`).join('')}</ul>`; }
-    li.innerHTML = html;
-    if (item.sub.length) {
-        const toggle = li.querySelector('.mob-toggle');
-        const subList = li.querySelector('.mob-sub-list');
-        toggle.addEventListener('click', () => {
-            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', String(!isExpanded));
-            toggle.classList.toggle('open', !isExpanded);
-            subList.classList.toggle('open', !isExpanded);
-        });
-    }
-    mobileNav.appendChild(li);
-});
-const ham = document.getElementById('ham');
-const mobClose = document.getElementById('mob-close');
-const mobileMenu = document.getElementById('mobile-menu');
-function openMobileMenu() { mobileMenu.classList.add('open'); ham.classList.add('open'); ham.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
-function closeMobileMenu() { mobileMenu.classList.remove('open'); ham.classList.remove('open'); ham.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
-ham.addEventListener('click', openMobileMenu);
-mobClose.addEventListener('click', closeMobileMenu);
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
-
-/* NAV SCROLL */
-const nav = document.getElementById('nav');
-const navCta = document.getElementById('nav-cta');
-function updateNavCta() { navCta.style.display = (window.scrollY > 160 && window.innerWidth > 1020) ? 'inline-flex' : 'none'; }
-window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); updateNavCta(); }, { passive: true });
-window.addEventListener('resize', updateNavCta, { passive: true });
-
-/* FAQ ACCORDION */
-document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const body = btn.nextElementSibling;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(i => {
-            i.classList.remove('open');
-            i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-            i.querySelector('.faq-a').hidden = true;
-        });
-        if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); body.hidden = false; }
-    });
-});
-
-/* REVEAL */
-(function() {
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-})();
-</script>
+<div class="sticky-cta"><a class="btn btn-primary" href="anfrage.html">Projekt anfragen</a></div>
+<script src="site.js"></script>
 </body>
 </html>

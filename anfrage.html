@@ -1,677 +1,160 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Projekt anfragen | Metallbau Meyer – Meisterbetrieb Eberswalde</title>
-    <meta name="description" content="Starten Sie jetzt Ihre Anfrage bei Metallbau Meyer in Eberswalde. Kostenlos und unverbindlich – wir melden uns innerhalb eines Werktages.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://metallbau-meyer-eberswalde.de/anfrage.html">
-    <meta property="og:title" content="Projekt anfragen | Metallbau Meyer Eberswalde">
-    <meta property="og:description" content="Unverbindliche Anfrage stellen. Geländer, Tore, Treppen, Stahlbau – Meisterbetrieb Eberswalde seit 1988.">
-    <meta property="og:type" content="website">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-
-    <style>
-    :root {
-        --teal:       #0D9488;
-        --teal-light: #14B8A6;
-        --teal-dark:  #0F766E;
-        --teal-bg:    #F0FDFB;
-        --teal-glow:  rgba(13,148,136,0.06);
-        --ink:        #1C2329;
-        --ink-soft:   #4B5563;
-        --mist:       #F7F8F9;
-        --line:       #E5E7EB;
-        --white:      #ffffff;
-        --footer-bg:  #F3F4F6;
-        --serif: 'Space Grotesk', system-ui, sans-serif;
-        --sans:  'DM Sans', system-ui, sans-serif;
-        --nav-h: 72px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 24px); }
-    body { font-family: var(--sans); font-size: 17px; background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.8; }
-
-    .label { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); }
-    .label::before { content: ''; display: block; width: 18px; height: 1px; background: var(--teal); flex-shrink: 0; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; text-decoration: none; white-space: nowrap; }
-    .btn-solid { background: var(--teal); color: var(--white); padding: 14px 28px; }
-    .btn-solid:hover { background: var(--teal-dark); }
-    .btn-ghost { color: var(--teal); border-bottom: 1px solid var(--teal); padding-bottom: 2px; }
-    .btn-ghost:hover { gap: 12px; }
-    .btn-outline-white { color: var(--ink); border: 1px solid var(--line); padding: 14px 28px; }
-    .btn-outline-white:hover { border-color: var(--ink-soft); }
-    .btn-cta-accent { background: var(--teal); color: var(--white); padding: 14px 28px; }
-    .btn-cta-accent:hover { background: var(--teal-dark); }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
-    .reveal.in { opacity: 1; transform: none; }
-    .rv1 { transition-delay: 0.08s; } .rv2 { transition-delay: 0.16s; } .rv3 { transition-delay: 0.24s; }
-    h2.sh { font-family: var(--serif); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; margin-top: 10px; }
-    .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; flex-wrap: wrap; gap: 16px; }
-    svg { display: block; } img { max-width: 100%; height: auto; }
-
-    /* NAV */
-    #nav { position: fixed; top: 0; inset-x: 0; z-index: 60; background: rgba(255,255,255,0.98); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); transition: box-shadow 0.3s; }
-    #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
-    .nav-inner { max-width: 1340px; margin: 0 auto; padding: 0 40px; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; flex-shrink: 0; line-height: 1; letter-spacing: -0.01em; }
-    .nav-logo span { color: var(--teal); }
-    #nav-items { display: flex; list-style: none; gap: 40px; margin-left: auto; padding-right: 40px; padding-left: 64px; align-items: center; }
-    .menu-item > a { font-size: 14px; font-weight: 500; letter-spacing: 0.02em; color: var(--ink-soft); text-decoration: none; padding-bottom: 4px; transition: color 0.15s; display: block; border-bottom: 1.5px solid transparent; }
-    .menu-item > a:hover, .menu-item.active > a { color: var(--teal); border-bottom-color: var(--teal); }
-    #dropdown { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); box-shadow: 0 20px 48px rgba(15,23,42,0.06); display: none; justify-content: center; z-index: 50; }
-    #dropdown.show { display: flex; }
-    #dropdown-content { max-width: 1340px; width: 100%; padding: 36px 40px; display: flex; gap: 48px; }
-    .drop-col { flex: 1; }
-    .drop-col h4 { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 16px; }
-    .drop-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .drop-col ul li a { font-size: 14px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.15s, padding-left 0.15s; display: inline-block; }
-    .drop-col ul li a:hover { color: var(--teal); padding-left: 4px; }
-    .nav-right { display: flex; align-items: center; gap: 16px; }
-    #nav-cta { display: none; }
-    #ham { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; color: var(--ink); }
-    .bar { display: block; width: 22px; height: 1.5px; background: currentColor; border-radius: 1px; transition: all 0.3s ease; transform-origin: center; }
-    #ham.open .bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    #ham.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    #ham.open .bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    @media (max-width: 1020px) { #nav-items { display: none; } #ham { display: flex; } .nav-inner { padding: 0 24px; } #nav-cta { display: none !important; } }
-
-    /* MOBILE MENU */
-    #mobile-menu { position: fixed; inset: 0; z-index: 80; background: var(--white); opacity: 0; visibility: hidden; transform: scale(0.98); transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1), transform 0.28s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0.28s; display: flex; flex-direction: column; overflow: hidden; }
-    #mobile-menu.open { transform: scale(1); opacity: 1; visibility: visible; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1), transform 0.28s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0s; }
-    .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: var(--nav-h); border-bottom: 1px solid var(--line); flex-shrink: 0; }
-    .mob-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-    .mob-logo span { color: var(--teal); }
-    #mob-close { background: none; border: none; cursor: pointer; color: var(--ink-soft); padding: 8px; display: flex; align-items: center; justify-content: center; transition: color 0.15s; }
-    #mob-close:hover { color: var(--ink); }
-    .mob-nav { padding: 0 24px; flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-    #mobile-nav-items { list-style: none; display: flex; flex-direction: column; }
-    .mob-row { display: flex; align-items: center; border-bottom: 1px solid var(--line); }
-    #mobile-nav-items > li:first-child .mob-row { border-top: 1px solid var(--line); }
-    .mob-main-link { flex: 1; display: flex; align-items: center; gap: 14px; padding: 18px 0; text-decoration: none; }
-    .mob-main-left { display: flex; align-items: center; gap: 14px; }
-    .mob-num { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--teal); font-family: var(--serif); min-width: 20px; }
-    .mob-main-label { font-family: var(--serif); font-size: 21px; font-weight: 400; color: var(--ink); letter-spacing: -0.01em; line-height: 1; }
-    .mob-main-link:hover .mob-main-label, .mob-main-link.active .mob-main-label { color: var(--teal); }
-    .mob-toggle { background: none; border: none; cursor: pointer; padding: 18px 0 18px 16px; color: var(--ink-soft); flex-shrink: 0; display: flex; align-items: center; transition: color 0.15s; }
-    .mob-toggle:hover, .mob-toggle.open { color: var(--teal); }
-    .mob-toggle svg { transition: transform 0.25s ease; }
-    .mob-toggle.open svg { transform: rotate(180deg); }
-    .mob-sub-list { list-style: none; padding: 4px 0 14px; display: none; }
-    .mob-sub-list.open { display: block; }
-    .mob-sub-list li a { display: flex; align-items: center; gap: 10px; padding: 8px 0 8px 34px; font-size: 14px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
-    .mob-sub-list li a:hover { color: var(--teal); }
-    .mob-bottom { padding: 20px 24px; border-top: 1px solid var(--line); flex-shrink: 0; }
-    .mob-bottom .btn-cta-accent { width: 100%; justify-content: center; font-size: 13px; padding: 14px 28px; }
-    .mob-legal { display: flex; gap: 20px; margin-top: 14px; }
-    .mob-legal a { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
-    .mob-legal a:hover { color: var(--ink); }
-
-    /* PAGE HERO */
-    .page-hero { padding-top: var(--nav-h); background: var(--white); border-bottom: 1px solid var(--line); }
-    .page-hero-inner { max-width: 1340px; margin: 0 auto; padding: 56px 40px 52px; }
-    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 22px; }
-    .breadcrumb a { color: var(--ink-soft); text-decoration: none; transition: color 0.15s; }
-    .breadcrumb a:hover { color: var(--teal); }
-    .breadcrumb .bc-active { color: var(--teal); }
-    .page-hero-h1 { font-family: var(--serif); font-size: clamp(1.7rem, 3.2vw, 2.6rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin: 14px 0 16px; }
-    .page-hero-h1 em { font-style: normal; color: var(--teal); }
-    .page-hero-sub { font-size: 16px; line-height: 1.8; color: var(--ink-soft); max-width: 56ch; }
-
-    /* FORM SECTION */
-    #anfrage-form-section { border-top: 1px solid var(--line); }
-    .form-outer { max-width: 1340px; margin: 0 auto; padding: 72px 40px; display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start; }
-    .form-side-info { position: sticky; top: calc(var(--nav-h) + 32px); }
-    .form-side-info h2 { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; margin: 10px 0 16px; }
-    .form-side-info p { font-size: 15px; line-height: 1.8; color: var(--ink-soft); margin-bottom: 28px; }
-    .form-trust { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
-    .form-trust-item { display: flex; align-items: flex-start; gap: 12px; }
-    .form-trust-icon { width: 34px; height: 34px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--teal); flex-shrink: 0; margin-top: 2px; }
-    .form-trust-text strong { display: block; font-size: 14px; font-weight: 500; color: var(--ink); }
-    .form-trust-text span { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
-
-    /* FORM */
-    #project-form { display: flex; flex-direction: column; gap: 0; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-    .form-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 20px; }
-    .form-field:last-child { margin-bottom: 0; }
-    .form-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
-    .form-label .req { color: var(--teal); margin-left: 2px; }
-    .form-input, .form-select, .form-textarea { font-family: var(--sans); font-size: 16px; color: var(--ink); background: var(--white); border: 1px solid var(--line); padding: 13px 15px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; appearance: none; width: 100%; }
-    .form-input::placeholder, .form-textarea::placeholder { color: rgba(75,85,99,0.45); }
-    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
-    .form-input.error, .form-select.error, .form-textarea.error { border-color: #EF4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.08); }
-    .form-error { font-size: 12px; color: #EF4444; font-weight: 500; letter-spacing: 0.02em; min-height: 16px; }
-    .form-select-wrap { position: relative; }
-    .form-select-wrap::after { content: ''; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid var(--ink-soft); pointer-events: none; }
-    .form-select { padding-right: 38px; cursor: pointer; }
-    .form-textarea { resize: vertical; min-height: 130px; line-height: 1.65; }
-    .form-divider { border: none; border-top: 1px solid var(--line); margin: 8px 0 26px; }
-    .form-check { display: flex; align-items: flex-start; gap: 14px; cursor: pointer; }
-    .form-check input[type="checkbox"] { width: 18px; height: 18px; min-width: 18px; border: 1px solid var(--line); background: var(--white); appearance: none; -webkit-appearance: none; cursor: pointer; transition: border-color 0.2s, background 0.2s; margin-top: 3px; position: relative; flex-shrink: 0; }
-    .form-check input[type="checkbox"]:checked { background: var(--teal); border-color: var(--teal); }
-    .form-check input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 4px; top: 1px; width: 7px; height: 11px; border: 2px solid #fff; border-top: none; border-left: none; transform: rotate(40deg); }
-    .form-check input[type="checkbox"].error { border-color: #EF4444; }
-    .form-check-text { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-    .form-check-text a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(13,148,136,0.3); transition: border-color 0.15s; }
-    .form-check-text a:hover { border-color: var(--teal); }
-    .form-submit-row { display: flex; align-items: center; gap: 20px; margin-top: 28px; flex-wrap: wrap; }
-    .btn-submit { background: var(--teal); color: var(--white); padding: 15px 36px; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s; }
-    .btn-submit:hover { background: var(--teal-dark); }
-    .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; }
-    .form-hint { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
-
-    /* SUCCESS STATE */
-    #form-success { display: none; padding: 52px 44px; background: var(--mist); border: 1px solid var(--line); text-align: center; }
-    #form-success.show { display: block; }
-    .success-icon { width: 52px; height: 52px; background: var(--teal); display: inline-flex; align-items: center; justify-content: center; color: #fff; margin: 0 auto 22px; }
-    .success-h { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 400; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.01em; }
-    .success-p { font-size: 15px; color: var(--ink-soft); max-width: 44ch; margin: 0 auto 26px; line-height: 1.75; }
-
-    /* WHY SECTION */
-    #warum { border-top: 1px solid var(--line); background: var(--mist); }
-    .warum-inner { max-width: 1340px; margin: 0 auto; padding: 68px 40px; }
-    .warum-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 44px; }
-    .warum-item { background: var(--white); padding: 28px 24px; }
-    .warum-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-    .warum-tag::before { content: ''; display: block; width: 14px; height: 1px; background: var(--teal); }
-    .warum-item h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-    .warum-item p { font-size: 14px; line-height: 1.75; color: var(--ink-soft); }
-
-    /* CTA */
-    #cta { background: var(--teal-bg); border-top: 1px solid rgba(13,148,136,0.12); border-bottom: 1px solid rgba(13,148,136,0.12); }
-    .cta-inner { max-width: 1340px; margin: 0 auto; padding: 64px 40px; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
-    .cta-lbl { color: var(--teal); }
-    .cta-lbl::before { background: var(--teal); }
-    .cta-h { font-family: var(--serif); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; color: var(--ink); line-height: 1.2; letter-spacing: -0.01em; margin: 10px 0 12px; }
-    .cta-h em { font-style: normal; color: var(--teal); }
-    .cta-sub { font-size: 15px; color: var(--ink-soft); line-height: 1.75; max-width: 52ch; }
-    .cta-btns { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
-
-    /* FOOTER */
-    #footer { background: var(--footer-bg); border-top: 1px solid var(--line); }
-    .footer-inner { max-width: 1340px; margin: 0 auto; padding: 48px 40px 32px; }
-    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 30px; border-bottom: 1px solid var(--line); margin-bottom: 22px; flex-wrap: wrap; }
-    .footer-logo { font-family: var(--serif); font-size: 19px; color: var(--ink); text-decoration: none; display: block; letter-spacing: -0.01em; }
-    .footer-logo span { color: var(--teal); }
-    .footer-tagline { font-size: 13px; color: var(--ink-soft); margin-top: 5px; }
-    .footer-cols { display: flex; gap: 48px; flex-wrap: wrap; }
-    .footer-col h5 { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
-    .footer-col p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .footer-copy { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.06em; }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--teal); }
-
-    /* RESPONSIVE */
-    @media (max-width: 1020px) {
-        .page-hero-inner { padding: 48px 24px 44px; }
-        .form-outer { grid-template-columns: 1fr; gap: 48px; padding: 52px 24px; }
-        .form-side-info { position: static; }
-        .warum-inner { padding: 52px 24px; }
-        .cta-inner { grid-template-columns: 1fr; gap: 28px; padding: 52px 24px; }
-        .footer-inner { padding: 40px 24px 28px; }
-    }
-    @media (max-width: 800px) {
-        .warum-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 640px) {
-        .form-row { grid-template-columns: 1fr; gap: 0; }
-        .cta-btns { flex-direction: row; flex-wrap: wrap; }
-    }
-    @media (max-width: 480px) {
-        .page-hero-inner { padding: 40px 20px 36px; }
-        .form-outer, .warum-inner, .cta-inner { padding: 44px 20px; }
-        .footer-inner { padding: 32px 20px 24px; }
-        .warum-grid { grid-template-columns: 1fr; }
-        #form-success { padding: 36px 20px; }
-    }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projekt anfragen – Metallbau Meyer, Eberswalde</title>
+<meta name="description" content="Projekt bei Metallbau Meyer in Eberswalde anfragen: kurz beschreiben, Anfrage per E-Mail vorbereiten.">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://metallbau-meyer-eberswalde.de/anfrage.html">
+<meta property="og:title" content="Projekt anfragen – Metallbau Meyer, Eberswalde">
+<meta property="og:description" content="Projekt bei Metallbau Meyer in Eberswalde anfragen: kurz beschreiben, Anfrage per E-Mail vorbereiten.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f766e'/%3E%3Cpath d='M8 24V8h4l4 7 4-7h4v16h-3.5V14l-4.5 7h-1L11.5 14v10z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav id="nav" aria-label="Hauptnavigation">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Daniel Meyer<span>.</span></a>
-        <ul id="nav-items" role="menubar">
-            <li class="menu-item" data-key="Leistungen" role="none"><a href="leistungen.html" role="menuitem">Leistungen</a></li>
-            <li class="menu-item" data-key="Lösungen" role="none"><a href="loesungen.html" role="menuitem">Lösungen</a></li>
-            <li class="menu-item" data-key="Unternehmen" role="none"><a href="unternehmen.html" role="menuitem">Unternehmen</a></li>
-            <li class="menu-item" data-key="Kontakt" role="none"><a href="kontakt.html" role="menuitem">Kontakt</a></li>
-        </ul>
-        <div id="dropdown" role="region" aria-label="Untermenü"><div id="dropdown-content"></div></div>
-        <div class="nav-right">
-            <a href="anfrage.html" class="btn btn-solid" id="nav-cta" aria-current="page">Projekt anfragen</a>
-            <button id="ham" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </div>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="wrap bar">
+        <a class="logo" href="index.html" aria-label="Metallbau Meyer – Startseite">Metallbau <span>Meyer</span></a>
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links"><span>Menü</span></button>
+        <nav aria-label="Hauptnavigation">
+            <ul class="nav-links" id="nav-links">
+                <li class="has-menu"><a href="leistungen.html">Leistungen</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Privat</p><ul><li><a href="leistungen.html#gelaender">Geländer &amp; Treppen</a></li><li><a href="leistungen.html#tor-zaun">Tore &amp; Zäune</a></li><li><a href="leistungen.html#balkon">Anbaubalkone</a></li><li><a href="leistungen.html#fenster">Fenster &amp; Türen</a></li><li><a href="leistungen.html#vordach-carport">Vordächer &amp; Carports</a></li></ul></div><div class="mega-col"><p class="mega-title">Gewerbe</p><ul><li><a href="leistungen.html#gewerbe">Stahlkonstruktionen</a></li><li><a href="leistungen.html#gewerbe">Treppen &amp; Podeste</a></li><li><a href="leistungen.html#gewerbe">Rammschutz</a></li><li><a href="leistungen.html#gewerbe">Hallentore</a></li></ul></div><div class="mega-col"><p class="mega-title">Fertigung</p><ul><li><a href="leistungen.html#fertigung">Laserschneiden</a></li><li><a href="leistungen.html#fertigung">Abkanten &amp; Biegen</a></li><li><a href="leistungen.html#fertigung">Schweißen</a></li><li><a href="leistungen.html#fertigung">Werkstoffe</a></li></ul></div></div></div></li>
+                <li class="has-menu"><a href="loesungen.html">Lösungen</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Bereiche</p><ul><li><a href="loesungen.html#privat">Privatbau</a></li><li><a href="loesungen.html#gewerbe">Gewerbebau</a></li><li><a href="loesungen.html#sonderbau">Sonderanfertigung</a></li></ul></div><div class="mega-col"><p class="mega-title">Zusätzlich</p><ul><li><a href="loesungen.html#zusaetzlich">Zufahrtskontrolle</a></li><li><a href="loesungen.html#zusaetzlich">Brandschutz</a></li><li><a href="loesungen.html#zusaetzlich">Carports für Photovoltaik</a></li><li><a href="loesungen.html#zusaetzlich">Reparatur &amp; Service</a></li></ul></div></div></div></li>
+                <li class="has-menu"><a href="unternehmen.html">Unternehmen</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Profil</p><ul><li><a href="unternehmen.html#team">Daniel Meyer</a></li><li><a href="unternehmen.html#prinzip">Wie wir arbeiten</a></li><li><a href="unternehmen.html#zertifikate">Qualifikationen</a></li></ul></div></div></div></li>
+                <li class="has-menu"><a href="kontakt.html">Kontakt</a><div class="mega"><div class="wrap mega-inner"><div class="mega-col"><p class="mega-title">Erreichbarkeit</p><ul><li><a href="kontakt.html">Telefon &amp; E-Mail</a></li><li><a href="kontakt.html#oeffnungszeiten">Öffnungszeiten</a></li></ul></div><div class="mega-col"><p class="mega-title">Direkt</p><ul><li><a href="anfrage.html">Projekt anfragen</a></li></ul></div></div></div></li>
+                <li><a class="btn btn-primary" href="anfrage.html" aria-current="page">Projekt anfragen</a></li>
+            </ul>
+        </nav>
     </div>
-</nav>
-
-<div id="mobile-menu" role="dialog" aria-label="Mobile Navigation" aria-modal="true">
-    <div class="mob-header">
-        <a href="index.html" class="mob-logo">Daniel Meyer<span>.</span></a>
-        <button id="mob-close" aria-label="Menü schließen">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-    </div>
-    <div class="mob-nav">
-        <ul id="mobile-nav-items"></ul>
-    </div>
-    <div class="mob-bottom">
-        <a href="anfrage.html" class="btn btn-cta-accent">
-            Projekt anfragen
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <div class="mob-legal">
-            <a href="impressum.html">Impressum</a>
-            <a href="datenschutz.html">Datenschutz</a>
-        </div>
-    </div>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero" aria-labelledby="page-h1">
-    <div class="page-hero-inner">
-        <div class="reveal">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="index.html">Startseite</a>
-                <span>›</span>
-                <span class="bc-active">Projekt anfragen</span>
-            </nav>
-            <div class="label">Kostenlos &amp; unverbindlich · Antwort innerhalb eines Werktages</div>
-            <h1 class="page-hero-h1" id="page-h1">Erzählen Sie uns von<br><em>Ihrem Projekt.</em></h1>
-            <p class="page-hero-sub">
-                Das Formular dauert unter drei Minuten. Wir prüfen Ihre Anfrage persönlich und melden uns mit einer ehrlichen Einschätzung – kostenlos und ohne Verpflichtung.
-            </p>
-        </div>
+</header>
+<main id="main">
+<section class="page-head">
+    <div class="wrap">
+        <h1>Projekt anfragen</h1>
+        <p class="lead">Beschreiben Sie kurz Ihr Vorhaben. Die Anfrage ist kostenlos und unverbindlich.</p>
     </div>
 </section>
 
-<!-- FORM SECTION -->
-<section id="anfrage-form-section" aria-labelledby="form-heading">
-    <div class="form-outer">
-
-        <!-- SIDEBAR INFO -->
-        <aside class="form-side-info reveal">
-            <div class="label">Anfrage stellen</div>
-            <h2 id="form-heading">Wir freuen uns auf Ihr Projekt</h2>
-            <p>Beschreiben Sie kurz, was Sie vorhaben – Ort, Größe, Material, Termin. Je mehr Details, desto präziser unser Angebot. Bilder und Pläne können Sie per E-Mail nachreichen.</p>
-
-            <div class="form-trust">
-                <div class="form-trust-item">
-                    <div class="form-trust-icon" aria-hidden="true">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div class="form-trust-text">
-                        <strong>Datenschutz garantiert</strong>
-                        <span>Ihre Daten werden ausschließlich für die Bearbeitung Ihrer Anfrage genutzt.</span>
-                    </div>
-                </div>
-                <div class="form-trust-item">
-                    <div class="form-trust-icon" aria-hidden="true">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    </div>
-                    <div class="form-trust-text">
-                        <strong>Antwort innerhalb 24 h</strong>
-                        <span>Wir melden uns an Werktagen persönlich – kein Autoresponder.</span>
-                    </div>
-                </div>
-                <div class="form-trust-item">
-                    <div class="form-trust-icon" aria-hidden="true">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <div class="form-trust-text">
-                        <strong>Kostenlos &amp; unverbindlich</strong>
-                        <span>Das Erstgespräch und die Einschätzung Ihres Projekts sind für Sie kostenlos.</span>
-                    </div>
-                </div>
-                <div class="form-trust-item">
-                    <div class="form-trust-icon" aria-hidden="true">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    </div>
-                    <div class="form-trust-text">
-                        <strong>Alternativ: direkt anrufen</strong>
-                        <span><a href="tel:+49333400000" style="color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(13,148,136,0.3);">+49 (0) 3334 00 00 00</a><br>Mo – Fr · 07:30 – 17:00 Uhr</span>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- FORM -->
+<section class="section">
+    <div class="wrap form-grid">
         <div>
-            <form id="project-form" novalidate aria-label="Projektanfrageformular">
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label class="form-label" for="vorname">Vorname <span class="req" aria-hidden="true">*</span></label>
-                        <input class="form-input" type="text" id="vorname" name="vorname" autocomplete="given-name" placeholder="Max" required>
-                        <span class="form-error" id="vorname-err" role="alert" aria-live="polite"></span>
-                    </div>
-                    <div class="form-field">
-                        <label class="form-label" for="nachname">Nachname <span class="req" aria-hidden="true">*</span></label>
-                        <input class="form-input" type="text" id="nachname" name="nachname" autocomplete="family-name" placeholder="Mustermann" required>
-                        <span class="form-error" id="nachname-err" role="alert" aria-live="polite"></span>
-                    </div>
+            <form id="form" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+                    <span class="err" id="name-err" role="alert"></span>
                 </div>
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label class="form-label" for="email">E-Mail-Adresse <span class="req" aria-hidden="true">*</span></label>
-                        <input class="form-input" type="email" id="email" name="email" autocomplete="email" placeholder="max@beispiel.de" required>
-                        <span class="form-error" id="email-err" role="alert" aria-live="polite"></span>
+                <div class="two">
+                    <div class="field">
+                        <label for="email">E-Mail</label>
+                        <input class="input" id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-err">
+                        <span class="err" id="email-err" role="alert"></span>
                     </div>
-                    <div class="form-field">
-                        <label class="form-label" for="telefon">Telefon</label>
-                        <input class="form-input" type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+49 (0) 30 000 000">
-                        <span class="form-error" id="telefon-err" role="alert" aria-live="polite"></span>
+                    <div class="field">
+                        <label for="tel">Telefon <span class="opt">(optional)</span></label>
+                        <input class="input" id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel">
                     </div>
                 </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="projektart">Projektart <span class="req" aria-hidden="true">*</span></label>
-                    <div class="form-select-wrap">
-                        <select class="form-select" id="projektart" name="projektart" required>
-                            <option value="" disabled selected>Bitte wählen …</option>
-                            <optgroup label="Privatbau">
-                                <option value="gelaender">Geländer &amp; Brüstungen</option>
-                                <option value="treppe">Stahltreppe</option>
-                                <option value="tor-zaun">Tor- &amp; Zaunanlagen</option>
-                                <option value="balkon">Anbaubalkon</option>
-                                <option value="fenster">Aluminiumfenster &amp; -türen</option>
-                            </optgroup>
-                            <optgroup label="Gewerbebau">
-                                <option value="stahlkonstruktion">Stahlkonstruktion / Tragwerk</option>
-                                <option value="wartungsbuehne">Wartungsbühne</option>
-                                <option value="rammschutz">Rammschutz &amp; Absperrung</option>
-                                <option value="hallentore">Hallentore</option>
-                            </optgroup>
-                            <optgroup label="Sonstiges">
-                                <option value="reparatur">Reparatur &amp; Wartung</option>
-                                <option value="sonstiges">Sonstiges / Individuell</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                    <span class="form-error" id="projektart-err" role="alert" aria-live="polite"></span>
+                <div class="field">
+                    <label for="art">Was möchten Sie bauen lassen? <span class="opt">(optional)</span></label>
+                    <select class="input" id="art" name="art">
+                        <option value="">Bitte wählen …</option>
+                        <option value="gelaender">Geländer &amp; Treppen</option>
+                        <option value="tor-zaun">Tore &amp; Zäune</option>
+                        <option value="balkon">Anbaubalkon</option>
+                        <option value="fenster">Fenster &amp; Türen</option>
+                        <option value="vordach-carport">Vordach &amp; Carport</option>
+                        <option value="stahlbau">Stahlbau für Gewerbe</option>
+                        <option value="reparatur">Reparatur &amp; Service</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
                 </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="adresse">Projektadresse / Standort</label>
-                    <input class="form-input" type="text" id="adresse" name="adresse" autocomplete="street-address" placeholder="Straße, PLZ Ort (oder Region)">
-                    <span class="form-error" id="adresse-err" role="alert" aria-live="polite"></span>
+                <div class="field">
+                    <label for="msg">Ihr Vorhaben</label>
+                    <textarea class="input" id="msg" name="msg" rows="6" maxlength="1200" required aria-describedby="msg-err" placeholder="Was soll gebaut werden? Wo (Ort)? Ungefähre Maße, Material, Wunschtermin …"></textarea>
+                    <span class="err" id="msg-err" role="alert"></span>
                 </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="beschreibung">Projektbeschreibung <span class="req" aria-hidden="true">*</span></label>
-                    <textarea class="form-textarea" id="beschreibung" name="beschreibung" rows="6" placeholder="Beschreiben Sie Ihr Vorhaben: Maße, Material, besondere Anforderungen, gewünschter Zeitrahmen …" required></textarea>
-                    <span class="form-error" id="beschreibung-err" role="alert" aria-live="polite"></span>
-                </div>
-
-                <hr class="form-divider">
-
-                <div class="form-field">
-                    <label class="form-check">
-                        <input type="checkbox" id="dsgvo" name="dsgvo" required>
-                        <span class="form-check-text">
-                            Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. <span class="req" aria-hidden="true">*</span>
-                        </span>
-                    </label>
-                    <span class="form-error" id="dsgvo-err" role="alert" aria-live="polite"></span>
-                </div>
-
-                <div class="form-submit-row">
-                    <button type="submit" class="btn-submit" id="submit-btn">
-                        Anfrage absenden
-                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </button>
-                    <p class="form-hint">Mit <span aria-hidden="true">*</span> markierte Felder sind Pflichtfelder.</p>
-                </div>
-
+                <button class="btn btn-primary" type="submit">Anfrage vorbereiten</button>
+                <p class="note">Beim Absenden öffnet sich Ihr E-Mail-Programm mit Ihrer vorbereiteten Nachricht an info@metallbau-meyer-eberswalde.de. Erst wenn Sie dort auf „Senden“ klicken, geht die Anfrage an uns. Hinweise zum Datenschutz finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
             </form>
-
-            <!-- SUCCESS STATE -->
-            <div id="form-success" role="alert" aria-live="polite">
-                <div class="success-icon" aria-hidden="true">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <h2 class="success-h">Ihre Anfrage ist eingegangen.</h2>
-                <p class="success-p">Vielen Dank! Wir prüfen Ihr Projekt und melden uns innerhalb eines Werktages persönlich bei Ihnen.</p>
-                <a href="index.html" class="btn btn-solid">Zurück zur Startseite</a>
+            <div class="success" id="success" role="status" tabindex="-1">
+                <h2>Fast geschafft</h2>
+                <p>Ihr E-Mail-Programm sollte sich jetzt geöffnet haben. Bitte senden Sie die Nachricht dort ab.</p>
+                <p>Es hat sich nichts geöffnet? Schreiben Sie uns direkt an <a href="mailto:info@metallbau-meyer-eberswalde.de">info@metallbau-meyer-eberswalde.de</a> oder rufen Sie an: <a href="tel:+49333400000">+49 (0) 3334 00 00 00</a>.</p>
             </div>
         </div>
-
+        <aside class="aside-box" aria-label="Alternativ">
+            <h2 style="font-size:1.1rem">Lieber direkt sprechen?</h2>
+            <p>Telefon und Öffnungszeiten finden Sie auf der Kontaktseite.</p>
+            <p><a class="link-arrow" href="kontakt.html">Zum Kontakt</a></p>
+        </aside>
     </div>
 </section>
-
-<!-- WHY SECTION -->
-<section id="warum" aria-labelledby="warum-heading">
-    <div class="warum-inner">
-        <div class="section-head reveal">
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="foot">
             <div>
-                <div class="label">Warum Meyer?</div>
-                <h2 class="sh" id="warum-heading">Was uns von anderen unterscheidet</h2>
+                <strong>Metallbau Meyer</strong>
+                <p>Meisterbetrieb für Metallbau &amp; Stahlbau<br>Eberswalde, Brandenburg · seit 1988</p>
             </div>
+            <ul aria-label="Footer-Navigation">
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="loesungen.html">Lösungen</a></li>
+                <li><a href="unternehmen.html">Unternehmen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
         </div>
-        <div class="warum-grid">
-            <div class="warum-item reveal">
-                <div class="warum-tag">Seit 1988</div>
-                <h3>Meisterbetrieb</h3>
-                <p>Über 35 Jahre Erfahrung im Metallbau – jedes Projekt wird persönlich vom Meister betreut.</p>
-            </div>
-            <div class="warum-item reveal rv1">
-                <div class="warum-tag">Zertifiziert</div>
-                <h3>DIN EN 1090 EXC2</h3>
-                <p>Zertifiziert für tragende Stahlkonstruktionen – die Voraussetzung für gewerbliche und öffentliche Bauvorhaben.</p>
-            </div>
-            <div class="warum-item reveal rv2">
-                <div class="warum-tag">Inhouse</div>
-                <h3>Eigene Fertigung</h3>
-                <p>Keine Subunternehmer. Planung, Fertigung und Montage erfolgen ausschließlich durch unser eigenes Team in Eberswalde.</p>
-            </div>
-            <div class="warum-item reveal rv3">
-                <div class="warum-tag">Transparent</div>
-                <h3>Verbindliche Angebote</h3>
-                <p>Klare Preise, realistischer Zeitplan, kein Kleingedrucktes. Was wir anbieten, das liefern wir.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section id="cta">
-    <div class="cta-inner">
-        <div class="reveal">
-            <div class="label cta-lbl">Lieber direkt sprechen?</div>
-            <h2 class="cta-h" id="cta-heading">Rufen Sie uns einfach an –<br><em>Mo bis Fr, 07:30 – 17:00.</em></h2>
-            <p class="cta-sub">Sie erreichen uns direkt in der Werkstatt. Keine Warteschleife, kein Callcenter – nur ein ehrliches Gespräch mit dem Meister.</p>
-        </div>
-        <div class="cta-btns reveal rv1">
-            <a href="tel:+49333400000" class="btn btn-cta-accent">
-                Jetzt anrufen
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            </a>
-            <a href="kontakt.html" class="btn btn-outline-white">Zur Kontaktseite</a>
-        </div>
-    </div>
-</section>
-
-<footer id="footer" aria-label="Seitenfußbereich">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <a href="index.html" class="footer-logo">Meyer<span>.</span></a>
-                <p class="footer-tagline">Meisterbetrieb für Metallbau &amp; Stahlbau · Eberswalde seit 1988</p>
-            </div>
-            <div class="footer-cols">
-                <div class="footer-col"><h5>Werkstatt</h5><p>Musterstraße 12<br>16225 Eberswalde</p></div>
-                <div class="footer-col"><h5>Öffnungszeiten</h5><p>Mo – Do 07:30 – 17:00<br>Fr 07:30 – 15:30</p></div>
-                <div class="footer-col"><h5>Zertifizierung</h5><p>DIN EN 1090<br>EXC2 zertifiziert</p></div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">© 2026 Metallbau Meyer – Alle Rechte vorbehalten</p>
-            <div class="footer-links">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-                <a href="#">LinkedIn</a>
-            </div>
-        </div>
+        <p class="copy">© 2026 Metallbau Meyer</p>
     </div>
 </footer>
 
+<script src="site.js"></script>
 <script>
-const MENU_CONTENT = {
-    Leistungen: {
-        firstUl:  { title: 'Privat',    items: [['Geländer & Brüstungen','leistungen.html#privatbau'], ['Stahltreppen','leistungen.html#privatbau'], ['Tor- & Zaunanlagen','leistungen.html#privatbau'], ['Anbaubalkone','leistungen.html#privatbau'], ['Aluminiumfenster','leistungen.html#privatbau']] },
-        secondUl: { title: 'Gewerbe',   items: [['Stahlkonstruktionen','leistungen.html#gewerbebau'], ['Wartungsbühnen','leistungen.html#gewerbebau'], ['Rammschutz','leistungen.html#gewerbebau'], ['Hallentore','leistungen.html#gewerbebau']] },
-        thirdUl:  { title: 'Fertigung', items: [['Laserschneiden','leistungen.html#fertigung'], ['CNC-Biegen','leistungen.html#fertigung'], ['Schweißarbeiten','leistungen.html#fertigung']] }
-    },
-    Lösungen: {
-        firstUl:  { title: 'Segmente',    items: [['Privatbau','loesungen.html#privat'], ['Gewerbebau','loesungen.html#gewerbe'], ['Industrie & Sonderbau','loesungen.html#industrie']] },
-        secondUl: { title: 'Materialien', items: [['Edelstahl','loesungen.html#materialien'], ['Aluminium','loesungen.html#materialien'], ['Baustahl','loesungen.html#materialien']] },
-        thirdUl:  { title: 'Spezial',     items: [['Brandschutz','loesungen.html#spezial'], ['Smart-Access','loesungen.html#spezial'], ['PV-Carports','loesungen.html#spezial']] }
-    },
-    Unternehmen: {
-        firstUl:  { title: 'Profil',    items: [['Unsere Geschichte','unternehmen.html#geschichte'], ['Das Team','unternehmen.html#team'], ['Zertifikate','unternehmen.html#zertifikate']] },
-        secondUl: { title: 'Karriere',  items: [['Offene Stellen','#'], ['Ausbildung','#']] },
-        thirdUl:  { title: 'Aktuelles', items: [['Neuigkeiten','#'], ['Downloads','#']] }
-    },
-    Kontakt: {
-        firstUl:  { title: 'Anschrift', items: [['Werkstatt & Büro','kontakt.html'], ['Anfahrt','kontakt.html#anfahrt']] },
-        secondUl: { title: 'Direkt',    items: [['Anfrageformular','anfrage.html'], ['Rückruf vereinbaren','kontakt.html']] },
-        thirdUl:  { title: 'Service',   items: [['Öffnungszeiten','kontakt.html#oeffnungszeiten'], ['Reparatur & Notfall','kontakt.html']] }
+(function () {
+    var MAIL = "info@metallbau-meyer-eberswalde.de";
+    var form = document.getElementById("form");
+    var success = document.getElementById("success");
+    var art = document.getElementById("art");
+    var p = new URLSearchParams(location.search).get("art");
+    if (p) { for (var i = 0; i < art.options.length; i++) if (art.options[i].value === p) art.selectedIndex = i; }
+
+    function check(id, msg, ok) {
+        var el = document.getElementById(id), err = document.getElementById(id + "-err");
+        el.setAttribute("aria-invalid", ok ? "false" : "true");
+        err.textContent = ok ? "" : msg;
+        return ok;
     }
-};
-
-const menuItems = document.querySelectorAll('.menu-item');
-const dropdown = document.getElementById('dropdown');
-const dropdownContent = document.getElementById('dropdown-content');
-
-function openDropdown(key) {
-    const content = MENU_CONTENT[key];
-    if (!content) return;
-    menuItems.forEach(item => item.classList.toggle('active', item.dataset.key === key));
-    dropdownContent.innerHTML = '';
-    ['firstUl','secondUl','thirdUl'].forEach(section => {
-        const col = document.createElement('div');
-        col.className = 'drop-col';
-        col.innerHTML = `<h4>${content[section].title}</h4><ul>${content[section].items.map(i => `<li><a href="${Array.isArray(i) ? i[1] : '#'}">${Array.isArray(i) ? i[0] : i}</a></li>`).join('')}</ul>`;
-        dropdownContent.appendChild(col);
+    function validate() {
+        var n = check("name", "Bitte geben Sie Ihren Namen ein.", form.name.value.trim().length > 1);
+        var e = check("email", "Bitte geben Sie eine gültige E-Mail-Adresse ein.", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim()));
+        var m = check("msg", "Bitte beschreiben Sie kurz Ihr Vorhaben.", form.msg.value.trim().length > 9);
+        return n && e && m;
+    }
+    ["name", "email", "msg"].forEach(function (id) {
+        document.getElementById(id).addEventListener("blur", validate);
     });
-    dropdown.classList.add('show');
-}
-function closeDropdown() {
-    dropdown.classList.remove('show');
-    menuItems.forEach(item => item.classList.remove('active'));
-}
-menuItems.forEach(item => item.addEventListener('mouseenter', () => openDropdown(item.dataset.key)));
-document.getElementById('nav').addEventListener('mouseleave', closeDropdown);
-
-const MOB_NAV = [
-    { label: 'Leistungen',  href: 'leistungen.html',  num: '01', sub: [['Geländer & Brüstungen','leistungen.html#privatbau'],['Stahltreppen','leistungen.html#privatbau'],['Tor- & Zaunanlagen','leistungen.html#privatbau'],['Gewerbebau','leistungen.html#gewerbebau']] },
-    { label: 'Lösungen',    href: 'loesungen.html',   num: '02', sub: [['Privatbau','loesungen.html#privat'],['Gewerbebau','loesungen.html#gewerbe'],['Industrie','loesungen.html#industrie']] },
-    { label: 'Unternehmen', href: 'unternehmen.html', num: '03', sub: [['Geschichte','unternehmen.html#geschichte'],['Das Team','unternehmen.html#team'],['Zertifikate','unternehmen.html#zertifikate']] },
-    { label: 'Kontakt',     href: 'kontakt.html',     num: '04', sub: [['Adresse & Anfahrt','kontakt.html#anfahrt'],['Öffnungszeiten','kontakt.html#oeffnungszeiten']] },
-];
-const mobileNav = document.getElementById('mobile-nav-items');
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-MOB_NAV.forEach(item => {
-    const li = document.createElement('li');
-    const isActive = item.href === currentPage;
-    let html = `<div class="mob-row"><a href="${item.href}" class="mob-main-link${isActive ? ' active' : ''}"><span class="mob-main-left"><span class="mob-num">${item.num}</span><span class="mob-main-label">${item.label}</span></span></a>`;
-    if (item.sub.length) { html += `<button class="mob-toggle" aria-label="Untermenü ${item.label}" aria-expanded="false"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg></button>`; }
-    html += `</div>`;
-    if (item.sub.length) { html += `<ul class="mob-sub-list">${item.sub.map(s => `<li><a href="${s[1]}">${s[0]}</a></li>`).join('')}</ul>`; }
-    li.innerHTML = html;
-    if (item.sub.length) {
-        const toggle = li.querySelector('.mob-toggle');
-        const subList = li.querySelector('.mob-sub-list');
-        toggle.addEventListener('click', () => {
-            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', String(!isExpanded));
-            toggle.classList.toggle('open', !isExpanded);
-            subList.classList.toggle('open', !isExpanded);
-        });
-    }
-    mobileNav.appendChild(li);
-});
-
-const ham = document.getElementById('ham');
-const mobClose = document.getElementById('mob-close');
-const mobileMenu = document.getElementById('mobile-menu');
-function openMobileMenu()  { mobileMenu.classList.add('open');    ham.classList.add('open');    ham.setAttribute('aria-expanded', 'true');  document.body.style.overflow = 'hidden'; }
-function closeMobileMenu() { mobileMenu.classList.remove('open'); ham.classList.remove('open'); ham.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
-ham.addEventListener('click', openMobileMenu);
-mobClose.addEventListener('click', closeMobileMenu);
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
-
-const nav = document.getElementById('nav');
-const navCta = document.getElementById('nav-cta');
-function updateNavCta() { navCta.style.display = (window.scrollY > 160 && window.innerWidth > 1020) ? 'inline-flex' : 'none'; }
-window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); updateNavCta(); }, { passive: true });
-window.addEventListener('resize', updateNavCta, { passive: true });
-
-(function() {
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        if (!validate()) { var bad = form.querySelector('[aria-invalid="true"]'); if (bad) bad.focus(); return; }
+        var artLabel = art.value ? art.options[art.selectedIndex].text : "–";
+        var body = "Name: " + form.name.value.trim() + "\n" +
+                   "E-Mail: " + form.email.value.trim() + "\n" +
+                   "Telefon: " + (form.tel.value.trim() || "–") + "\n" +
+                   "Projektart: " + artLabel + "\n\n" + form.msg.value.trim();
+        var href = "mailto:" + MAIL + "?subject=" + encodeURIComponent("Projektanfrage") + "&body=" + encodeURIComponent(body);
+        form.style.display = "none";
+        success.classList.add("show");
+        success.focus();
+        location.href = href;
+    });
 })();
-
-const form = document.getElementById('project-form');
-const successBox = document.getElementById('form-success');
-
-const validators = {
-    vorname:      v => v.trim().length >= 2 ? '' : 'Bitte geben Sie Ihren Vornamen ein.',
-    nachname:     v => v.trim().length >= 2 ? '' : 'Bitte geben Sie Ihren Nachnamen ein.',
-    email:        v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
-    telefon:      v => '',
-    projektart:   v => v ? '' : 'Bitte wählen Sie eine Projektart aus.',
-    adresse:      v => '',
-    beschreibung: v => v.trim().length >= 20 ? '' : 'Bitte beschreiben Sie Ihr Projekt (mindestens 20 Zeichen).',
-    dsgvo:        (v, el) => el.checked ? '' : 'Bitte stimmen Sie der Datenschutzerklärung zu.',
-};
-
-function validateField(id) {
-    const el = document.getElementById(id);
-    const errEl = document.getElementById(id + '-err');
-    if (!el || !errEl) return true;
-    const msg = validators[id] ? validators[id](el.value, el) : '';
-    el.classList.toggle('error', !!msg);
-    errEl.textContent = msg;
-    return !msg;
-}
-
-Object.keys(validators).forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('blur', () => validateField(id));
-    if (el && el.type === 'checkbox') el.addEventListener('change', () => validateField(id));
-});
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const fields = Object.keys(validators);
-    const allValid = fields.map(id => validateField(id)).every(Boolean);
-    if (!allValid) {
-        const firstErr = form.querySelector('.error');
-        if (firstErr) firstErr.focus();
-        return;
-    }
-    const btn = document.getElementById('submit-btn');
-    btn.disabled = true;
-    btn.textContent = 'Wird gesendet …';
-    setTimeout(() => {
-        form.style.display = 'none';
-        successBox.classList.add('show');
-        successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 800);
-});
 </script>
 </body>
 </html>
